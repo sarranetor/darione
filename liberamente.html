@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Libera-mente - Intelligenza Emotiva</title>
+    
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ======== TEMA BLU/VIOLA ESISTENTE (MANTENUTO) ======== */
+        :root {
+            --colore-primario-libera: #667eea; /* Blu/Viola */
+            --colore-secondario-libera: #764ba2; /* Viola */
+            --colore-scuro-libera: #4a5db9; /* Blu scuro */
+            --colore-sfondo: #f4f6ff; /* Sfondo pagina molto chiaro */
+        }
+
+        /* Sezione principale */
+        #progetto-liberamente {
+            background-color: #F5F5DC !important; /* Sfondo crema come l'home */
+        }
+
+        /* Card per contenuti */
+        .content-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
+        }
+
+        .content-card .icon {
+            font-size: 3rem;
+            color: var(--colore-primario-libera);
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-card h3, .gallery-liberamente h3,
+        #progetto-liberamente h2 {
+             color: #333333 !important; /* Titoli antracite */
+        }
+
+        /* Stile per la galleria fotografica */
+        .gallery-liberamente .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-liberamente .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .gallery-liberamente .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        /* Bottone con tema */
+        .btn-libera {
+            background-color: var(--colore-primario-libera);
+            border-color: var(--colore-primario-libera);
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+        .btn-libera:hover {
+            background-color: var(--colore-scuro-libera);
+            border-color: var(--colore-scuro-libera);
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Divider con colore */
+        .divider-libera {
+            width: 80px;
+            height: 4px;
+            background: var(--colore-primario-libera);
+            margin-top: 1rem;
+            border-radius: 2px;
+        }
+        
+        .text-muted {
+            color: #5a5a5a !important;
+        }
+        
+        /* ===== STILE HEADER CORTO (BANNER) ===== */
+        .page-header-short {
+            position: relative;
+            background-image: url('foto/albero_vita_1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+        .page-header-short .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* ===== MODIFICA CHIAVE: OVERLAY BLU/VIOLA ===== */
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%) !important;
+        }
+        .page-header-short .container {
+            position: relative;
+            z-index: 2;
+        }
+        .page-header-short h1, .page-header-short .lead {
+             color: #FFFFFF !important;
+        }
+
+        /* ===== STILI FOOTER DA HOME ===== */
+        footer {
+            background-color: #333333 !important; 
+        }
+        footer h5 {
+             color: #FFFFFF !important; 
+        }
+        footer .text-muted {
+            color: #adb5bd !important;
+        }
+
+        /* ===== STILI NAVBAR DA HOME (per coerenza) ===== */
+        .navbar-dark .navbar-brand,
+        .navbar-dark .nav-link {
+            color: #FFFFFF !important;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" style="opacity: 1;" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-seedling me-2"></i>
+                Juter
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#chisiamo-section">Chi Siamo</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownDark" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                            Progetti
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownDark">
+                            <li><a class="dropdown-item" href="sentieri.html">Sentieri del sentile</a></li>
+                            <li><a class="dropdown-item active" href="liberamente.html">Libera-mente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contatti">Contatti</a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header-short" style="background-image: url('foto/albero_vita_1.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center hero-content">
+                    <h1 class="display-3 fw-bold text-white mb-3" data-aos="fade-up">
+                        Progetto Libera-mente
+                    </h1>
+                    <p class="lead text-white mb-0" data-aos="fade-up" data-aos-delay="100">
+                        Arte, Emozioni e Consapevolezza in Carcere
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="progetto-liberamente" class="py-5">
+        <div class="container">
+            
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-3">L'Arte che Libera</h2>
+                    <p class="lead text-muted">
+                        Un percorso di disegno e arte per esplorare l'intelligenza emotiva 
+                        all'interno del contesto carcerario.
+                    </p>
+                    <div class="divider-libera mx-auto"></div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Arte+in+Carcere" alt="Disegni dal progetto" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="content-card">
+                        <div class="icon"><i class="fas fa-palette"></i></div>
+                        <h3 class="h2 mb-3">Disegnare le Emozioni</h3>
+                        <p class="text-muted">
+                            Il progetto "Libera-mente" utilizza l'arte come strumento principale per lavorare 
+                            sull'<strong>intelligenza emotiva</strong>. Attraverso laboratori di disegno, pittura e arte terapia, 
+                            i partecipanti sono guidati in un percorso di auto-analisi e consapevolezza.
+                        </p>
+                        <p class="text-muted mt-3">
+                            L'obiettivo è fornire strumenti per riconoscere, comprendere e gestire le proprie emozioni 
+                            in un ambiente complesso come quello carcerario, trasformando l'espressione artistica 
+                            in una forma di dialogo interiore.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 gallery-liberamente">
+                <div class="col-12 text-center mb-4" data-aos="fade-up">
+                    <h3 class="h2 fw-bold">Opere dal Progetto</h3>
+                    <p class="text-muted">Una selezione dei lavori realizzati durante i laboratori.</p>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Opera+1" alt="Foto Progetto 1" onerror="this.src='https://via.placeholder.com/400x300/764ba2/ffffff?text=Opera+1';">
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300/a3b0f5/ffffff?text=Opera+2" alt="Foto Progetto 2" onerror="this.src='https://via.placeholder.com/400x300/a3b0f5/ffffff?text=Opera+2';">
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="httpsGPG-KEY-beta": "https://via.placeholder.com/400x300/4a5db9/ffffff?text=Opera+3" alt="Foto Progetto 3" onerror="this.src='https://via.placeholder.com/400x300/4a5db9/ffffff?text=Opera+3';">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 py-5 bg-white rounded shadow-sm" data-aos="fade-up">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h2 class="fw-bold mb-3">Supporta il Progetto</h2>
+                    <p class="text-muted fs-5 mb-4">
+                        Per maggiori informazioni su "Libera-mente" o per 
+                        supportare le nostre iniziative, non esitare a contattarci.
+                    </p>
+                    <a href="#contatti" class="btn btn-libera btn-lg px-5">
+                        <i class="fas fa-envelope me-2"></i>Contattaci
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contatti" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Chi Siamo</h5>
+                    <p class="text-muted">
+                        Juter è un'associazione modenese e 'juter' 
+                        deriva dalla parola dialettale 'aiutare'.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Contatti</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i> juterodv@gmail.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i> +39 375 6088 761
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i> Modena
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Seguici</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-muted">
+                <p class="mb-0">&copy; 2025 Juter. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

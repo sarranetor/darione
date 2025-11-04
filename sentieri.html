@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Sentieri - Orto e Giardino Sensoriale</title>
+    
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Livello 1: Base (Calma & Engagement) */
+        body {
+            background-color: #F5F5DC !important; /* Crema/Off-white */
+            color: #333333; /* Antracite (Testo principale) */
+        }
+        
+        /* LA VERA CORREZIONE "ANTI-VIOLA" (Overlay) */
+        .hero-section .overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%) !important;
+        }
+
+        /* CORREZIONE NAV "VIOLA" (Barra Superiore) */
+        .bg-body-tertiary {
+             background-color: #140606 !important;
+             border-bottom: 1px solid #dcdacb !important;
+        }
+
+        /* Livello 2: Brand (Fiducia & Stabilità) */
+        h1, h2, h3, h4, h5,
+        .navbar-brand,
+        .nav-link.link-body-emphasis,
+        .hero-section h1,
+        .page-header-short h1 /* Aggiunto */
+        {
+            color: #faf3f3 !important;
+        }
+        
+        .hero-section h1, .hero-section .lead,
+        .page-header-short h1, .page-header-short .lead /* Aggiunto */
+        {
+            color: #FFFFFF !important;
+        }
+        
+        .navbar-dark .navbar-brand,
+        .navbar-dark .nav-link {
+            color: #FFFFFF !important;
+        }
+
+        footer {
+            background-color: #333333 !important; 
+        }
+        footer h5 {
+             color: #FFFFFF !static;
+        }
+        .text-muted {
+            color: #5a5a5a !important;
+        }
+        footer .text-muted {
+            color: #adb5bd !important;
+        }
+
+        /* Livello 3: Azione (Conversione & Urgenza) */
+        .btn-action {
+            background-color: #CC5500 !important; /* Terracotta */
+            color: #FFFFFF !important;
+            font-weight: 700;
+            border-radius: 50px !important;
+            transition: all 0.3s ease;
+        }
+        .btn-action:hover {
+            background-color: #a04300 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Bottoni Brand (Azione secondaria) */
+        .btn-brand {
+            background-color: #556B2F !important; /* Verde Salvia Scuro */
+            color: #FFFFFF !important;
+            border-radius: 50px !important;
+            transition: all 0.3s ease;
+        }
+        .btn-brand:hover {
+            background-color: #425424 !important;
+            transform: translateY(-2px);
+        }
+        
+        /* Stile per bottoni outline-brand (definito qui) */
+        .btn-outline-brand {
+            border-color: #556B2F !important;
+            color: #556B2F !important;
+            border-radius: 50px !important;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-brand:hover {
+            background-color: #556B2F !important;
+            color: #FFFFFF !important;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-link.btn-action {
+            padding: 0.375rem 1rem !important;
+        }
+
+        /* CORREZIONE BORDO LOGO (per Homepage) */
+        .logo-container .logo {
+            width: 150px; 
+            height: auto; 
+            border: 3px solid #F5F5DC;
+            border-radius: 8px;
+            background-color: #F5F5DC;
+        }
+        
+        .hero-section {
+            padding-top: 70px;
+        }
+
+        /* ===== NUOVO STILE PER HEADER CORTO (BANNER) ===== */
+        .page-header-short {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Mantiene effetto parallax */
+            padding-top: 150px;  /* 70px navbar + 80px spazio */
+            padding-bottom: 100px; /* Spazio sotto il titolo */
+        }
+        .page-header-short .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%) !important;
+        }
+        .page-header-short .container {
+            position: relative;
+            z-index: 2;
+        }
+        /* ===== FINE NUOVO STILE ===== */
+
+
+        /* * STILI SPECIFICI PER "SENTIERI" ADATTATI AL NUOVO TEMA
+        */
+        
+        #progetto-sentieri {
+            background-color: #F5F5DC; /* Sfondo Crema */
+        }
+        
+        .content-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .content-card .icon {
+            font-size: 3rem;
+            color: #556B2F; /* Verde Salvia Scuro */
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-card h3 {
+             color: #333333 !important; /* Antracite */
+        }
+        
+        .gallery-sentieri .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-sentieri .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .gallery-sentieri .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .divider-brand {
+            width: 80px;
+            height: 4px;
+            background: #556B2F; /* Verde Salvia Scuro */
+            margin-top: 1rem;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" style="opacity: 1;" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-seedling me-2"></i>
+                Juter
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#chisiamo-section">Chi Siamo</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownDark" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                            Progetti
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownDark">
+                            <li><a class="dropdown-item active" href="sentieri.html">Sentieri del sentile</a></li>
+                            <li><a class="dropdown-item" href="liberamente.html">Libera-mente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contatti">Contatti</a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header-short" style="background-image: url('foto/albero_vita_1.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center hero-content">
+                    <h1 class="display-3 fw-bold text-white mb-3" data-aos="fade-up">
+                        Progetto Sentieri
+                    </h1>
+                    <p class="lead text-white mb-0" data-aos="fade-up" data-aos-delay="100">
+                        Un orto e giardino sensoriale a Montecenere.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="progetto-sentieri" class="py-5">
+        <div class="container">
+            
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-3" style="color: #333333 !important;">Coltiviamo Insieme Esperienze</h2>
+                    <p class="lead text-muted">
+                        "Sentieri" è più di un progetto; è uno spazio vivo di crescita, apprendimento e inclusione 
+                        nel cuore della provincia di Modena.
+                    </p>
+                    <div class="divider-brand mx-auto"></div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="foto/ortosensoriale1.jpeg" alt="Orto Sensoriale" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="content-card">
+                        <div class="icon"><i class="fas fa-seedling"></i></div>
+                        <h3 class="h2 mb-3">L'Orto e il Giardino</h3>
+                        <p class="text-muted">
+                            Il nostro progetto si sviluppa a <strong>Montecenere (MO)</strong> e consiste nella creazione e cura di un orto e un giardino sensoriale. 
+                            Non è solo un luogo dove le piante crescono, ma dove le persone si incontrano per stimolare i cinque sensi: 
+                            toccare la terra, annusare i profumi delle erbe aromatiche, osservare i colori dei fiori, 
+                            ascoltare i suoni della natura e assaggiare i frutti del lavoro comune.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center flex-lg-row-reverse mb-5">
+                <div class="col-lg-6" data-aos="fade-left">
+                     <img src="https://via.placeholder.com/600x400/556B2F/ffffff?text=Bambini+e+Adolescenti" alt="Bambini e Adolescenti" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
+                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="content-card">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <h3 class="h2 mb-3">I Protagonisti</h3>
+                        <p class="text-muted">
+                            Il progetto è pensato principalmente per <strong>bambini e adolescenti</strong>, offrendo loro un ambiente 
+                            educativo e ricreativo lontano dagli schermi, a contatto con la natura. 
+                            È un laboratorio all'aperto per imparare il ciclo della vita, la pazienza e l'importanza della cura.
+                        </p>
+                        <p class="text-muted mt-3">
+                            Le attività sono <strong>aperte anche agli adulti</strong> che desiderano partecipare, 
+                            condividere le proprie conoscenze o semplicemente godere di un momento di relax e socialità.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 gallery-sentieri">
+                <div class="col-12 text-center mb-4" data-aos="fade-up">
+                    <h3 class="h2 fw-bold" style="color: #333333 !important;">I Nostri Momenti nel Verde</h3>
+                    <p class="text-muted">Una galleria di foto dal nostro orto e giardino.</p>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300/A0A983/ffffff?text=Momento+1" alt="Foto Progetto 1" onerror="this.src='https://via.placeholder.com/400x300/A0A983/ffffff?text=Momento+1';">
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="https"https://via.placeholder.com/400x300/556B2F/ffffff?text=Momento+2" alt="Foto Progetto 2" onerror="this.src='https;://via.placeholder.com/400x300/556B2F/ffffff?text=Momento+2';">
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300/D4D8C8/ffffff?text=Momento+3" alt="Foto Progetto 3" onerror="this.src='https://via.placeholder.com/400x300/D4D8C8/ffffff?text=Momento+3';">
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row mt-5 py-5 bg-white rounded shadow-sm" data-aos="fade-up">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h2 class="fw-bold mb-3" style="color: #333333 !important;">Vieni a trovarci!</h2>
+                    <p class="text-muted fs-5 mb-4">
+                        Sei interessato a partecipare, a portare una classe o semplicemente 
+                        a scoprire il nostro giardino sensoriale a Montecenere? 
+                        Contattaci per maggiori informazioni!
+                    </p>
+                    <a href="#contatti" class="btn btn-brand btn-lg px-5 me-3 mb-2">
+                        <i class="fas fa-envelope me-2"></i>Contattaci
+                    </a>
+                    <a href="index.html#chisiamo-section" class="btn btn-outline-brand btn-lg px-5 mb-2">
+                        <i class="fas fa-users me-2"></i>Chi Siamo
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contatti" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Chi Siamo</h5>
+                    <p class="text-muted">
+                        Juter è un'associazione modenese e 'juter' 
+                        deriva dalla parola dialettale 'aiutare'.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Contatti</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i> juterodv@gmail.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i> +39 375 6088 761
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i> Modena
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Seguici</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-muted">
+                <p class="mb-0">&copy; 2025 Juter. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News ed Eventi - Associazione Juter</title>
+    
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Livello 1: Base (Calma & Engagement) */
+        body {
+            background-color: #F5F5DC !important; /* Crema/Off-white */
+            color: #333333; /* Antracite (Testo principale) */
+        }
+        
+        /* CORREZIONE NAV (Barra Superiore) */
+        .bg-body-tertiary {
+             background-color: #140606 !important;
+             border-bottom: 1px solid #dcdacb !important;
+        }
+
+        /* Livello 2: Brand (Fiducia & Stabilità) */
+        h1, h2, h3, h4, h5,
+        .navbar-brand,
+        .nav-link.link-body-emphasis,
+        .page-header-short h1
+        {
+            color: #faf3f3 !important;
+        }
+        
+        .page-header-short h1, .page-header-short .lead
+        {
+            color: #FFFFFF !important;
+        }
+        
+        .navbar-dark .navbar-brand,
+        .navbar-dark .nav-link {
+            color: #FFFFFF !important;
+        }
+
+        footer {
+            background-color: #333333 !important; 
+        }
+        footer h5 {
+             color: #FFFFFF !static;
+        }
+        .text-muted {
+            color: #5a5a5a !important;
+        }
+        footer .text-muted {
+            color: #adb5bd !important;
+        }
+        
+        /* Stili specifici per la pagina (titoli, ecc) */
+        #pagina-news h2, #pagina-news h3 {
+             color: #333333 !important;
+        }
+
+
+        /* ===== STILE HEADER CORTO (BANNER) - CORRETTO E UNIFORME ===== */
+        .page-header-short {
+            position: relative;
+            background-image: url('foto/albero_vita_1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            /* Altezza corretta: 150px sopra + 100px sotto */
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+        .page-header-short .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%) !important;
+        }
+        .page-header-short .container {
+            position: relative;
+            z-index: 2;
+        }
+        /* ===== FINE STILE CORRETTO ===== */
+
+
+        /* * STILI SPECIFICI PER "NEWS" ADATTATI AL NUOVO TEMA
+        */
+        #pagina-news {
+            background-color: #F5F5DC; /* Sfondo Crema */
+        }
+
+        .news-content {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+        }
+        
+        .news-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Divider con colore brand */
+        .divider-brand {
+            width: 80px;
+            height: 4px;
+            background: #556B2F; /* Verde Salvia Scuro */
+            margin-top: 1rem;
+            border-radius: 2px;
+        }
+        
+        /* Stile per i dettagli dell'evento */
+        .event-details {
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+        .event-details h4 {
+            color: #556B2F !important; /* Verde Salvia */
+            font-weight: 700;
+        }
+        .event-details ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        .event-details li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        .event-details li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: #556B2F; /* Verde Salvia */
+            font-size: 1.2rem;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" style="opacity: 1;" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-seedling me-2"></i>
+                Juter
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#chisiamo-section">Chi Siamo</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDark" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Progetti
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownDark">
+                            <li><a class="dropdown-item" href="sentieri.html">Sentieri del sentile</a></li>
+                            <li><a class="dropdown-item" href="liberamente.html">Libera-mente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html" aria-current="page">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contatti">Contatti</a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header-short" style="background-image: url('foto/albero_vita_1.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center hero-content">
+                    <h1 class="display-3 fw-bold text-white mb-3" data-aos="fade-up">
+                        News ed Eventi
+                    </h1>
+                    <p class="lead text-white mb-0" data-aos="fade-up" data-aos-delay="100">
+                        Rimani aggiornato sulle nostre ultime attività
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="pagina-news" class="py-5">
+        <div class="container">
+            
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-3">Prossimi Appuntamenti</h2>
+                    <p class="lead text-muted">
+                        Scopri gli eventi in programma e le novità dai nostri progetti.
+                    </p>
+                    <div class="divider-brand mx-auto"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto" data-aos="fade-up">
+                    <div class="news-content">
+                        
+                        <div class="text-center">
+                            <h3 class="h2 mb-4">Inaugurazione Orto Sensoriale</h3>
+                            <p class="text-muted fs-5 mb-4">
+                                Siamo felici di annunciare il prossimo evento legato al progetto "Sentieri del sentile". 
+                                Vi aspettiamo numerosi! 🎉
+                            </p>
+                            <img src="foto/localdina_ortosensoriale.jpeg" alt="Locandina Orto Sensoriale" class="img-fluid rounded shadow-lg">
+                        </div>
+                        
+                        <hr class="my-4">
+                        
+                        <div class="event-details px-lg-3">
+                            <h4 class="h3 mb-3">VIENI A PERCORRERE <em>“I SENTIERI DEL SENTIRE”</em> 🌿</h4>
+                            
+                            <p class="text-muted">Un progetto gratuito per bambini dai 7 ai 14 anni, pensato per favorire il riavvicinamento alla natura e alle proprie emozioni attraverso la creazione di un orto e di un giardino sensoriale, guidati da professionisti esperti.</p>
+                            
+                            <p class="text-muted">Ti invitiamo alla giornata di presentazione del progetto “I Sentieri del Sentire”, <em>un percorso gratuito dedicato a bambini dai 7 ai 14 anni e alle loro famiglie</em>.</p>
+                            
+                            <p class="text-muted">Durante l’incontro racconteremo gli obiettivi e le attività del progetto, che partirà ufficialmente in primavera 🌸. In questa fase iniziamo a raccogliere le adesioni e a costruire insieme la comunità 🤝 che accompagnerà i bambini in un’esperienza unica tra natura, emozioni e creatività 🎨.</p>
+                            
+                            <p class="text-muted">La giornata sarà anche un’occasione per mettere le mani nella terra 👐 e dare simbolicamente inizio ai lavori per la realizzazione di un giardino sensoriale e di un piccolo orto didattico, spazi dove i partecipanti potranno sperimentare, osservare e crescere attraverso il contatto diretto con la natura.</p>
+                            
+                            <p class="text-muted">Non mancheranno <em>workshop interattivi, momenti di condivisione con cibo e bevande 🥪, e tante opportunità per conoscere da vicino il progetto e le sue potenzialità</em>.</p>
+                            
+                            <p class="text-muted">Ti aspettiamo per intraprendere insieme questo nuovo sentiero di scoperta e crescita! 😊 Il progetto è gratuito e aperto alla partecipazione delle famiglie: un’occasione per crescere insieme, in armonia con la natura.</p>
+                            
+                            <hr class="my-4">
+                            
+                            <ul class="mt-4">
+                                <li>
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <strong>Quando:</strong> <em>15 Novembre</em> 🗓️
+                                </li>
+                                <li>
+                                    <i class="fas fa-clock"></i>
+                                    <strong>Orario:</strong> dalle 10:30 alle 17:00 ⏰
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <strong>Dove:</strong> via Ca’ Unaldo 2, Montecenere (MO). 📍
+                                    <small class="d-block text-muted" style="color: #5a5a5a !important;">Dati i limitati posti in loco vi consigliamo di lasciare l’auto al parcheggio di Montecenere (via Giardini) oppure in via Mercato Vecchio 2 e raggiungere in pochi minuti il posto a piedi. Grazie per la disponibilità</small>
+                                </li>
+                                <li>
+                                    <i class="fas fa-info-circle"></i>
+                                    <strong>Per iscrizioni e informazioni:</strong> 📞
+                                    <div class="text-muted mt-2" style="color: #5a5a5a !important;">
+                                        Dario: <strong>375 608 8761</strong><br>
+                                        Stefano: <strong>345 065 3433</strong><br>
+                                        ✉️ Email: <strong>juterodv@gmail.com</strong>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contatti" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Chi Siamo</h5>
+                    <p class="text-muted">
+                        Juter è un'associazione modenese e 'juter' 
+                        deriva dalla parola dialettale 'aiutare'.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Contatti</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i> juterodv@gmail.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i> +39 375 6088 761
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i> Modena
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Seguici</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-muted">
+                <p class="mb-0">&copy; 2025 Juter. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
