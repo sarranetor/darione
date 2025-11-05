@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
+        /* Per non avere problemi di larghezza su mobile con AOS */
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
         /* ======== TEMA BLU/VIOLA ESISTENTE (MANTENUTO) ======== */
         :root {
             --colore-primario-libera: #667eea; /* Blu/Viola */
@@ -25,8 +31,11 @@
         }
 
         /* Sezione principale */
+        body {
+             background-color: #F5F5DC !important; /* Sfondo crema come l'home */
+        }
         #progetto-liberamente {
-            background-color: #F5F5DC !important; /* Sfondo crema come l'home */
+            background-color: #F5F5DC !important; 
         }
 
         /* Card per contenuti */
@@ -35,6 +44,7 @@
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             padding: 2.5rem;
+            height: 100%; /* Aggiunto per allineare card */
         }
 
         .content-card .icon {
@@ -48,22 +58,6 @@
              color: #333333 !important; /* Titoli antracite */
         }
 
-        /* Stile per la galleria fotografica */
-        .gallery-liberamente .gallery-item {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        .gallery-liberamente .gallery-item img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        .gallery-liberamente .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-        
         /* Bottone con tema */
         .btn-libera {
             background-color: var(--colore-primario-libera);
@@ -111,7 +105,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* ===== MODIFICA CHIAVE: OVERLAY BLU/VIOLA ===== */
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%) !important;
         }
         .page-header-short .container {
@@ -139,30 +132,31 @@
             color: #FFFFFF !important;
         }
 
-        /* ===== FIX PER HEADER SU MOBILE ===== */
+        /* ===== NUOVI STILI PER CAROUSEL ===== */
+        .carousel-item img {
+            height: 550px; /* Altezza fissa per le slide */
+            object-fit: contain; /* 'contain' mostra l'opera intera, evita tagli */
+            background-color: #f1f1f1; /* Sfondo chiaro per opere non orizzontali */
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 1.5rem;
+        }
+
+        /* ===== FIX PER MOBILE ===== */
         @media (max-width: 768px) {
-            /* Disabilita l'effetto parallax (background-attachment: fixed) 
-            perché non è supportato bene su mobile e causa 'zoom' strani. */
             .page-header-short {
                 background-attachment: scroll !important;
             }
-
-            /* Riduci anche la dimensione del titolo per schermi piccoli */
             .page-header-short h1 {
-                font-size: 2.5rem !important; /* Riduci da 'display-3' */
+                font-size: 2.5rem !important;
             }
-        }
-
-        html,
-        body {
-            overflow-x: hidden;
-        }
-        /* ================================ */
-
-        /* Livello 1: Base (Calma & Engagement) */
-        body {
-            background-color: #F5F5DC !important; /* Crema/Off-white */
-            color: #333333; /* Antracite (Testo principale) */
+            /* Riduci altezza carousel su mobile */
+            .carousel-item img {
+                height: 350px; 
+            }
         }
     </style>
 </head>
@@ -237,7 +231,7 @@
 
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Arte+in+Carcere" alt="Disegni dal progetto" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
+                    <img src="foto/liberamente/evento1.jpeg" alt="Mostra del progetto Libera-mente" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="content-card">
@@ -256,32 +250,72 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row mt-5 gallery-liberamente">
-                <div class="col-12 text-center mb-4" data-aos="fade-up">
-                    <h3 class="h2 fw-bold">Opere dal Progetto</h3>
-                    <p class="text-muted">Una selezione dei lavori realizzati durante i laboratori.</p>
+            
+            <div class="row align-items-center mb-5 flex-lg-row-reverse">
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="foto/liberamente/evento2.jpeg" alt="Foto della mostra a Bastiglia" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
                 </div>
-                
-                <div class="col-md-4 mb-4" data-aos="zoom-in">
-                    <div class="gallery-item">
-                        <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Opera+1" alt="Foto Progetto 1" onerror="this.src='https://via.placeholder.com/400x300/764ba2/ffffff?text=Opera+1';">
-                    </div>
-                </div>
-                
-                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="gallery-item">
-                        <img src="https://via.placeholder.com/400x300/a3b0f5/ffffff?text=Opera+2" alt="Foto Progetto 2" onerror="this.src='https://via.placeholder.com/400x300/a3b0f5/ffffff?text=Opera+2';">
-                    </div>
-                </div>
-                
-                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="gallery-item">
-                        <img src="httpsGPG-KEY-beta": "https://via.placeholder.com/400x300/4a5db9/ffffff?text=Opera+3" alt="Foto Progetto 3" onerror="this.src='https://via.placeholder.com/400x300/4a5db9/ffffff?text=Opera+3';">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="content-card">
+                        <div class="icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3 class="h2 mb-3">La Mostra a Bastiglia</h3>
+                        <p class="text-muted">
+                            Il percorso artistico e umano del progetto "Libera-mente" è stato condiviso con la comunità attraverso un evento di disseminazione.
+                        </p>
+                        <p class="text-muted mt-3">
+                            Nel **Febbraio 2025**, le opere realizzate sono state esposte in una mostra dedicata a **Bastiglia (MO)**, creando un ponte tra il carcere e il territorio. È stata un'occasione preziosa per mostrare il potenziale e le riflessioni emerse, dando voce e visibilità ai talenti scoperti.
+                        </p>
                     </div>
                 </div>
             </div>
 
+            <div class="row mt-5 pt-5 justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10 text-center">
+                    <h3 class="h2 fw-bold mb-3">Opere dal Progetto</h3>
+                    <p class="text-muted fs-5 mb-4">Una selezione dei lavori realizzati dai partecipanti durante i laboratori. <br>Clicca sulle frecce per scorrere o attendi la rotazione automatica.</p>
+                    
+                    <div id="carouselOpere" class="carousel slide shadow-lg rounded" data-bs-ride="carousel" data-bs-interval="15000">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselOpere" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Opera 1"></button>
+                            <button type="button" data-bs-target="#carouselOpere" data-bs-slide-to="1" aria-label="Opera 2"></button>
+                            <button type="button" data-bs-target="#carouselOpere" data-bs-slide-to="2" aria-label="Opera 3"></button>
+                            <button type="button" data-bs-target="#carouselOpere" data-bs-slide-to="3" aria-label="Opera 4"></button>
+                            <button type="button" data-bs-target="#carouselOpere" data-bs-slide-to="4" aria-label="Opera 5"></button>
+                            <button type="button" data-bs-target="#carouselOpere" data-bs-slide-to="5" aria-label="Opera 6"></button>
+                        </div>
+                        
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="foto/liberamente/1.jpeg" class="d-block w-100" alt="Opera 1 - Progetto Libera-mente">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/liberamente/2.jpeg" class="d-block w-100" alt="Opera 2 - Progetto Libera-mente">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/liberamente/3.jpeg" class="d-block w-100" alt="Opera 3 - Progetto Libera-mente">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/liberamente/4.jpeg" class="d-block w-100" alt="Opera 4 - Progetto Libera-mente">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/liberamente/5.jpeg" class="d-block w-100" alt="Opera 5 - Progetto Libera-mente">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/liberamente/6.jpeg" class="d-block w-100" alt="Opera 6 - Progetto Libera-mente">
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOpere" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Precedente</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselOpere" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Successiva</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
             <div class="row mt-5 py-5 bg-white rounded shadow-sm" data-aos="fade-up">
                 <div class="col-lg-8 mx-auto text-center">
                     <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
