@@ -11,6 +11,10 @@ body {
     color: #333;
 }
 
+nav#mainNav {
+        opacity: 1 !important;
+    }
+
 /* Hero Section */
 .hero-section {
     position: relative;
