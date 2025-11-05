@@ -138,6 +138,20 @@
         .navbar-dark .nav-link {
             color: #FFFFFF !important;
         }
+
+        /* ===== FIX PER HEADER SU MOBILE ===== */
+        @media (max-width: 768px) {
+            /* Disabilita l'effetto parallax (background-attachment: fixed) 
+            perché non è supportato bene su mobile e causa 'zoom' strani. */
+            .page-header-short {
+                background-attachment: scroll !important;
+            }
+
+            /* Riduci anche la dimensione del titolo per schermi piccoli */
+            .page-header-short h1 {
+                font-size: 2.5rem !important; /* Riduci da 'display-3' */
+            }
+        }
     </style>
 </head>
 <body>
