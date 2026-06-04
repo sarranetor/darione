@@ -3,62 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetto Sentieri - Orto e Giardino Sensoriale</title>
-    
+    <title>I Sentieri del Sentire - Juter ODV</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        /* Livello 1: Base (Calma & Engagement) */
-        html,
-        body {
+        html, body {
             overflow-x: hidden;
         }
-        /* ================================ */
 
-        /* Livello 1: Base (Calma & Engagement) */
         body {
-            background-color: #F5F5DC !important; /* Crema/Off-white */
-            color: #333333; /* Antracite (Testo principale) */
+            background-color: #F5F5DC !important;
+            color: #333333;
         }
-        
-        /* CORREZIONE NAV "VIOLA" (Barra Superiore) */
+
         .bg-body-tertiary {
              background-color: #140606 !important;
              border-bottom: 1px solid #dcdacb !important;
         }
 
-        /* Livello 2: Brand (Fiducia & Stabilità) */
         h1, h2, h3, h4, h5,
         .navbar-brand,
         .nav-link.link-body-emphasis,
-        .page-header-short h1 /* Aggiunto */
+        .page-header-short h1
         {
             color: #faf3f3 !important;
         }
-        
-        .page-header-short h1, .page-header-short .lead /* Aggiunto */
-        {
+
+        .page-header-short h1, .page-header-short .lead {
             color: #FFFFFF !important;
         }
-        
+
         .navbar-dark .navbar-brand,
         .navbar-dark .nav-link {
             color: #FFFFFF !important;
         }
 
         footer {
-            background-color: #333333 !important; 
+            background-color: #333333 !important;
         }
         footer h5 {
-             color: #FFFFFF !static;
+             color: #FFFFFF !important;
         }
         .text-muted {
             color: #5a5a5a !important;
@@ -67,9 +60,8 @@
             color: #adb5bd !important;
         }
 
-        /* Livello 3: Azione (Conversione & Urgenza) */
         .btn-action {
-            background-color: #CC5500 !important; /* Terracotta */
+            background-color: #CC5500 !important;
             color: #FFFFFF !important;
             font-weight: 700;
             border-radius: 50px !important;
@@ -81,9 +73,8 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        /* Bottoni Brand (Azione secondaria) */
         .btn-brand {
-            background-color: #556B2F !important; /* Verde Salvia Scuro */
+            background-color: #556B2F !important;
             color: #FFFFFF !important;
             border-radius: 50px !important;
             transition: all 0.3s ease;
@@ -92,8 +83,7 @@
             background-color: #425424 !important;
             transform: translateY(-2px);
         }
-        
-        /* Stile per bottoni outline-brand (definito qui) */
+
         .btn-outline-brand {
             border-color: #556B2F !important;
             color: #556B2F !important;
@@ -111,14 +101,13 @@
         .nav-link.btn-action {
             padding: 0.375rem 1rem !important;
         }
-        
-        /* ===== STILE HEADER CORTO (BANNER) ===== */
+
         .page-header-short {
             position: relative;
             background-image: url('foto/albero_vita_1.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; 
+            background-attachment: fixed;
             padding-top: 150px;
             padding-bottom: 100px;
         }
@@ -134,39 +123,65 @@
             position: relative;
             z-index: 2;
         }
-        /* ===== FINE NUOVO STILE ===== */
 
-
-        /* * STILI SPECIFICI PER "SENTIERI" ADATTATI AL NUOVO TEMA
-        */
-        
         #progetto-sentieri {
-            background-color: #F5F5DC; /* Sfondo Crema */
+            background-color: #F5F5DC;
         }
-        
+
         .content-card {
             background: #ffffff;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             padding: 2.5rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%; /* Aggiunto per allineare le card */
+            height: 100%;
         }
         .content-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
         }
-        
+
         .content-card .icon {
             font-size: 3rem;
-            color: #556B2F; /* Verde Salvia Scuro */
+            color: #556B2F;
             margin-bottom: 1.5rem;
         }
-        
+
         .content-card h3 {
-             color: #333333 !important; /* Antracite */
+             color: #333333 !important;
         }
-        
+
+        .stat-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+        .stat-card .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #556B2F;
+            line-height: 1;
+        }
+        .stat-card .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333333;
+            margin-top: 0.5rem;
+        }
+        .stat-card .stat-desc {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+            margin-top: 0.25rem;
+        }
+
         .gallery-sentieri .gallery-item {
             border-radius: 15px;
             overflow: hidden;
@@ -181,40 +196,62 @@
         .gallery-sentieri .gallery-item:hover img {
             transform: scale(1.08);
         }
-        
-        /* Stile per il placeholder della galleria */
-        .gallery-placeholder {
-            border: 3px dashed #ddd;
+
+        .festa-section {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            padding: 3rem 2rem;
         }
-        .gallery-placeholder i {
-            color: #adb5bd !important; /* Grigio chiaro per l'icona */
+        .festa-section blockquote {
+            border-left: 4px solid #556B2F;
+            padding-left: 1.5rem;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #333333;
+            margin: 2rem 0;
         }
-        
+        .festa-section blockquote footer {
+            background-color: transparent !important;
+            color: #5a5a5a !important;
+            font-size: 0.9rem;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+
+        .fondazione-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f0f4e8;
+            border: 1px solid #c8d9a0;
+            border-radius: 50px;
+            padding: 0.4rem 1rem;
+            font-size: 0.9rem;
+            color: #556B2F;
+            font-weight: 600;
+        }
+
         .divider-brand {
             width: 80px;
             height: 4px;
-            background: #556B2F; /* Verde Salvia Scuro */
+            background: #556B2F;
             margin-top: 1rem;
             border-radius: 2px;
         }
 
-        /* ===== FIX PER HEADER SU MOBILE ===== */
         @media (max-width: 768px) {
-            /* Disabilita l'effetto parallax (background-attachment: fixed) 
-            perché non è supportato bene su mobile e causa 'zoom' strani. */
             .page-header-short {
                 background-attachment: scroll !important;
             }
-
-            /* Riduci anche la dimensione del titolo per schermi piccoli */
             .page-header-short h1 {
-                font-size: 2.5rem !important; /* Riduci da 'display-3' */
+                font-size: 2.5rem !important;
             }
         }
     </style>
 </head>
 <body>
-    
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" style="opacity: 1;" id="mainNav">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
@@ -247,22 +284,28 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contatti">Contatti</a>
                     </li>
-                    </ul>
+                </ul>
             </div>
         </div>
     </nav>
-    
-    <header class="page-header-short" style="background-image: url('foto/albero_vita_1.jpg');">
+
+    <header class="page-header-short">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center hero-content">
                     <h1 class="display-3 fw-bold text-white mb-3" data-aos="fade-up">
-                        Progetto Sentieri
+                        I Sentieri del Sentire
                     </h1>
-                    <p class="lead text-white mb-0" data-aos="fade-up" data-aos-delay="100">
-                        Un orto e giardino sensoriale a Montecenere.
+                    <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="100">
+                        Un percorso di natura, emozioni e comunità a Montecenere.
                     </p>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <span class="fondazione-badge">
+                            <i class="fas fa-hands-helping"></i>
+                            Con il supporto di Fondazione di Modena
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -270,84 +313,216 @@
 
     <section id="progetto-sentieri" class="py-5">
         <div class="container">
-            
+
+            <!-- INTRO -->
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
-                    <h2 class="display-5 fw-bold mb-3" style="color: #333333 !important;">Coltiviamo Insieme Esperienze</h2>
+                    <h2 class="display-5 fw-bold mb-3" style="color: #333333 !important;">Un Progetto, Tante Storie</h2>
                     <p class="lead text-muted">
-                        "Sentieri" è più di un progetto; è uno spazio vivo di crescita, apprendimento e inclusione 
-                        nel cuore della provincia di Modena.
+                        "I Sentieri del Sentire" è un progetto promosso da Juter ODV e sostenuto da <strong>Fondazione di Modena</strong>.
+                        Da marzo a maggio 2026, bambini, adolescenti e famiglie si sono ritrovati ogni mese a
+                        <strong><strong>Montecenere, nell'Appennino Modenese</strong></strong>, per vivere esperienze a contatto con la natura,
+                        imparare a riconoscere le proprie emozioni e costruire qualcosa insieme con le proprie mani.
                     </p>
                     <div class="divider-brand mx-auto"></div>
                 </div>
             </div>
 
+            <!-- STAT CARDS -->
+            <div class="row g-4 mb-5 justify-content-center">
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="stat-card">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Incontri</div>
+                        <div class="stat-desc">Da marzo a maggio 2026</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Bambini</div>
+                        <div class="stat-desc">Ragazzi protagonisti del progetto</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-card">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Famiglie Coinvolte</div>
+                        <div class="stat-desc">Genitori e famiglie partecipanti</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Spazi Verdi Creati</div>
+                        <div class="stat-desc">Giardino sensoriale, frutteto e orto</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOCK A: MANI NELLA TERRA -->
             <div class="row align-items-stretch g-4 mb-5">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="foto/sentieri/ortosensoriale1.jpeg" alt="Orto Sensoriale" class="img-fluid rounded shadow-lg mb-4 mb-lg-0" style="height: 100%; object-fit: cover;">
+                    <video class="rounded shadow-lg mb-4 mb-lg-0" style="height: 100%; width: 100%; object-fit: cover;" controls playsinline>
+                        <source src="foto/sentieri/claudia_ferrari_laboratorio.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="content-card">
                         <div class="icon"><i class="fas fa-seedling"></i></div>
-                        <h3 class="h2 mb-3">L'Orto e il Giardino</h3>
+                        <h3 class="h2 mb-3">Mani nella Terra</h3>
                         <p class="text-muted">
-                            Il nostro progetto si sviluppa a <strong>Montecenere (MO)</strong> e consiste nella creazione e cura di un orto e un giardino sensoriale. 
-                            Non è solo un luogo dove le piante crescono, ma dove le persone si incontrano per stimolare i cinque sensi: 
-                            toccare la terra, annusare i profumi delle erbe aromatiche, osservare i colori dei fiori, 
-                            ascoltare i suoni della natura e assaggiare i frutti del lavoro comune.
+                            Il cuore del progetto sono i tre spazi verdi che i partecipanti hanno creato e curato nel tempo:
+                            un <strong>giardino sensoriale</strong> piantato dai bambini, un <strong>frutteto</strong> con alberi ancora in acclimatazione
+                            e un <strong>orto</strong> dove hanno seminato pomodori, irrigato e pacciamato con le proprie mani.
+                        </p>
+                        <p class="text-muted mt-3">
+                            A guidare i ragazzi in questo percorso c'era anche <strong>Claudia Ferrari</strong>, esperta di agricoltura naturale,
+                            accompagnata dal marito Ugo e dalla mamma Gina. Una famiglia che ha portato al progetto
+                            energia, passione e conoscenze tramandate: dalla cura delle piante alla produzione alimentare,
+                            con quella filosofia semplice e autentica di <em>"persone che aiutano persone"</em>.
                         </p>
                     </div>
                 </div>
             </div>
 
+            <!-- BLOCK B: IL BOSCO CHE INSEGNA -->
             <div class="row align-items-stretch g-4 flex-lg-row-reverse mb-5">
                 <div class="col-lg-6" data-aos="fade-left">
-                     <img src="foto/sentieri/bambini_ed_adolascenti.jpg" alt="Bambini e Adolescenti" class="img-fluid rounded shadow-lg mb-4 mb-lg-0" style="height: 100%; object-fit: cover;">
+                    <img src="foto/sentieri/bambini_ed_adolascenti.jpg" alt="Bambini nel bosco" class="img-fluid rounded shadow-lg mb-4 mb-lg-0" style="height: 100%; object-fit: cover;">
                 </div>
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="content-card">
-                        <div class="icon"><i class="fas fa-users"></i></div>
-                        <h3 class="h2 mb-3">I Protagonisti</h3>
+                        <div class="icon"><i class="fas fa-tree"></i></div>
+                        <h3 class="h2 mb-3">Il Bosco che Insegna</h3>
                         <p class="text-muted">
-                            Il progetto è pensato principalmente per <strong>bambini e adolescenti</strong>, offrendo loro un ambiente 
-                            educativo e ricreativo lontano dagli schermi, a contatto con la natura. 
-                            È un laboratorio all'aperto per imparare il ciclo della vita, la pazienza e l'importanza della cura.
+                            Con la guida di <strong>Luca Braglia</strong>, esperto di erbe selvatiche, i partecipanti hanno esplorato i boschi
+                            dell'Appennino Modenese imparando a riconoscere le piante spontanee: quelle commestibili, quelle medicinali
+                            e quelle da evitare.
                         </p>
                         <p class="text-muted mt-3">
-                            Le attività sono <strong>aperte anche agli adulti</strong> che desiderano partecipare, 
-                            condividere le proprie conoscenze o semplicemente godere di un momento di relax e socialità.
+                            Una passeggiata che si è trasformata in una lezione di umiltà e rispetto:
+                            <em>"Conoscere le piante è complesso, ma imparare ad ammirarle e rispettarle è quello che conta davvero."</em>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="row mt-5 gallery-sentieri">
-                <div class="col-12 text-center mb-4" data-aos="fade-up">
-                    <h3 class="h2 fw-bold" style="color: #333333 !important;">I Nostri Momenti nel Verde</h3>
-                    <p class="text-muted">Una galleria di foto dal nostro orto e giardino.</p>
+            <!-- BLOCK C: EMOZIONI IN GIOCO -->
+            <div class="row align-items-stretch g-4 mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="foto/sentieri/pittura_intuitiva2.jpg" alt="Laboratorio di pittura intuitiva" class="img-fluid rounded shadow-lg mb-4 mb-lg-0" style="height: 100%; object-fit: cover;">
                 </div>
-                
-                <div class="col-lg-8 mx-auto text-center" data-aos="zoom-in">
-                    <div class="gallery-placeholder p-4 p-md-5 bg-white rounded shadow-sm">
-                        <i class="fas fa-camera fa-3x mb-3"></i>
-                        <p class="lead text-muted mb-0">
-                            Galleria in aggiornamento!
-                        </p>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="content-card">
+                        <div class="icon"><i class="fas fa-heart"></i></div>
+                        <h3 class="h2 mb-3">Emozioni in Gioco</h3>
                         <p class="text-muted">
-                            Questo spazio si riempirà presto con le foto che scatteremo durante le attività del progetto. Torna a trovarci!
+                            <strong>Alberto Genziani</strong>, educatore esperto di intelligenza emotiva, ha guidato i bambini
+                            attraverso cinque zone, ognuna dedicata a un'emozione diversa. Con l'aiuto dei burattini,
+                            i piccoli hanno imparato che le emozioni non sono né giuste né sbagliate: vanno capite e vissute.
+                        </p>
+                        <p class="text-muted mt-3">
+                            <strong>Chiara Orsi</strong>, laureata in psicologia con specializzazione in Outdoor Education,
+                            ha condotto un laboratorio di pittura intuitiva: <em>"Le emozioni non si spiegano, si colorano."</em>
+                            Il risultato? Un murale collettivo al Casone, fatto di segni, colori e storie di ognuno.
+                            Mentre i bambini giocavano, i genitori avevano il loro spazio protetto per parlare di genitorialità consapevole.
                         </p>
                     </div>
                 </div>
-                
             </div>
+
+            <!-- FESTA DEL RACCOLTO -->
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-lg-10 mx-auto">
+                    <div class="festa-section text-center">
+                        <div style="font-size: 3.5rem; color: #CC5500; margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h2 class="fw-bold mb-3" style="color: #333333 !important;">La Festa del Raccolto</h2>
+                        <p class="lead text-muted mb-4">
+                            Il 23 maggio si è tenuta la <strong>Festa Insieme</strong>: la celebrazione finale del progetto,
+                            aperta a tutti. La musica di un sassofono ha accompagnato il pomeriggio, le famiglie hanno portato
+                            cibo da condividere e i bambini hanno fatto da guida ai tre spazi verdi che loro stessi avevano
+                            creato in questi mesi.
+                        </p>
+                        <blockquote class="text-start mx-auto" style="max-width: 600px;">
+                            "Ci sono giornate che ti lasciano addosso una scia di gratitudine difficile da spiegare a parole."
+                            <footer>— Juter ODV, 23 maggio 2026</footer>
+                        </blockquote>
+                        <p class="text-muted">
+                            Non era una conclusione. Era l'inizio di qualcosa che continua a crescere —
+                            come gli alberi del frutteto che stanno ancora prendendo radici.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GALLERY -->
+            <div class="row mt-5 gallery-sentieri">
+                <div class="col-12 text-center mb-4" data-aos="fade-up">
+                    <h3 class="h2 fw-bold" style="color: #333333 !important;">I Nostri Momenti nel Verde</h3>
+                    <p class="text-muted">Scorci dal giardino, dall'orto e dagli incontri di "I Sentieri del Sentire".</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="gallery-item">
+                        <img src="foto/sentieri/ortosensoriale1.jpeg" alt="Il giardino sensoriale a Montecenere">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="gallery-item">
+                        <img src="foto/sentieri/bambini_ed_adolascenti.jpg" alt="Bambini e adolescenti al progetto">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="foto/sentieri/laboratorio_emozioni.jpg" alt="Laboratorio di intelligenza emotiva con Alberto Genziani">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="gallery-item">
+                        <img src="foto/sentieri/murale_collettivo.jpg" alt="Il murale collettivo realizzato al Casone">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="gallery-item">
+                        <img src="foto/sentieri/arte_espressiva.jpg" alt="Arte espressiva durante il laboratorio di Chiara Orsi">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="foto/sentieri/intelligenza_emotiva.jpg" alt="Sessione sull'intelligenza emotiva con i bambini">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="gallery-item">
+                        <img src="foto/sentieri/pittura_intuitiva2.jpg" alt="Laboratorio di pittura intuitiva">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="gallery-item">
+                        <img src="foto/sentieri/festa_insieme_prato.jpg" alt="La Festa Insieme del 23 maggio">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="foto/sentieri/festa_insieme_giardino1.jpg" alt="Il frutteto durante la Festa Insieme">
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
             <div class="row mt-5 py-5 bg-white rounded shadow-sm" data-aos="fade-up">
                 <div class="col-lg-8 mx-auto text-center">
-                    <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
-                    <h2 class="fw-bold mb-3" style="color: #333333 !important;">Vieni a trovarci!</h2>
+                    <div class="icon" style="font-size: 3rem; color: #556B2F; margin-bottom: 1.5rem;">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h2 class="fw-bold mb-3" style="color: #333333 !important;">Vuoi Partecipare al Prossimo Ciclo?</h2>
                     <p class="text-muted fs-5 mb-4">
-                        Sei interessato a partecipare, a portare una classe o semplicemente 
-                        a scoprire il nostro giardino sensoriale a Montecenere? 
-                        Contattaci per maggiori informazioni!
+                        "I Sentieri del Sentire" continua a crescere. Se sei interessato a portare i tuoi figli,
+                        a collaborare come esperto o semplicemente a scoprire il nostro giardino sensoriale a Montecenere,
+                        scrivici — saremo felici di accoglierti.
                     </p>
                     <a href="#contatti" class="btn btn-brand btn-lg px-5 me-3 mb-2">
                         <i class="fas fa-envelope me-2"></i>Contattaci
@@ -367,7 +542,7 @@
                 <div class="col-md-4 mb-4">
                     <h5 class="fw-bold mb-3">Chi Siamo</h5>
                     <p class="text-muted">
-                        Juter è un'associazione modenese e 'juter' 
+                        Juter è un'associazione modenese e 'juter'
                         deriva dalla parola dialettale 'aiutare'.
                     </p>
                 </div>
@@ -396,13 +571,13 @@
             </div>
             <hr class="my-4 bg-secondary">
             <div class="text-center text-muted">
-                <p class="mb-0">&copy; 2025 Juter. Tutti i diritti riservati.</p>
+                <p class="mb-0">&copy; 2026 Juter. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -410,7 +585,7 @@
             once: true
         });
     </script>
-    
+
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
