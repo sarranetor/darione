@@ -182,19 +182,16 @@
             margin-top: 0.25rem;
         }
 
-        .gallery-sentieri .gallery-item {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .gallery-sentieri .carousel-item img {
+            height: 500px;
+            object-fit: contain;
+            background-color: #f1f1f1;
         }
-        .gallery-sentieri .gallery-item img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        .gallery-sentieri .gallery-item:hover img {
-            transform: scale(1.08);
+        .gallery-sentieri .carousel-control-prev-icon,
+        .gallery-sentieri .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 1.5rem;
         }
 
         .festa-section {
@@ -247,6 +244,9 @@
             .page-header-short h1 {
                 font-size: 2.5rem !important;
             }
+            .gallery-sentieri .carousel-item img {
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -269,14 +269,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#chisiamo-section">Chi Siamo</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownDark" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
-                            Progetti
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownDark">
-                            <li><a class="dropdown-item active" href="sentieri.html">Sentieri del sentire</a></li>
-                            <li><a class="dropdown-item" href="liberamente.html">Libera-mente</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progetti.html">Progetti</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="news.html">News</a>
@@ -462,52 +456,61 @@
             <div class="row mt-5 gallery-sentieri">
                 <div class="col-12 text-center mb-4" data-aos="fade-up">
                     <h3 class="h2 fw-bold" style="color: #333333 !important;">I Nostri Momenti nel Verde</h3>
-                    <p class="text-muted">Scorci dal giardino, dall'orto e dagli incontri di "I Sentieri del Sentire".</p>
+                    <p class="text-muted">Scorci dal giardino, dall'orto e dagli incontri di "I Sentieri del Sentire". <br>Clicca sulle frecce per scorrere o attendi la rotazione automatica.</p>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="gallery-item">
-                        <img src="foto/sentieri/ortosensoriale1.jpeg" alt="Il giardino sensoriale a Montecenere">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="50">
-                    <div class="gallery-item">
-                        <img src="foto/sentieri/bambini_ed_adolascenti.jpg" alt="Bambini e adolescenti al progetto">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="gallery-item">
-                        <img src="foto/sentieri/laboratorio_emozioni.jpg" alt="Laboratorio di intelligenza emotiva con Alberto Genziani">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="gallery-item">
-                        <img src="foto/sentieri/murale_collettivo.jpg" alt="Il murale collettivo realizzato al Casone">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="50">
-                    <div class="gallery-item">
-                        <img src="foto/sentieri/arte_espressiva.jpg" alt="Arte espressiva durante il laboratorio di Chiara Orsi">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="gallery-item">
-                        <img src="foto/sentieri/intelligenza_emotiva.jpg" alt="Sessione sull'intelligenza emotiva con i bambini">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="gallery-item">
-                        <img src="foto/sentieri/pittura_intuitiva2.jpg" alt="Laboratorio di pittura intuitiva">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="50">
-                    <div class="gallery-item">
-                        <img src="foto/sentieri/festa_insieme_prato.jpg" alt="La Festa Insieme del 23 maggio">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="gallery-item">
-                        <img src="foto/sentieri/festa_insieme_giardino1.jpg" alt="Il frutteto durante la Festa Insieme">
+                <div class="col-lg-10 mx-auto" data-aos="fade-up">
+                    <div id="carouselMomenti" class="carousel slide shadow-lg rounded" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselMomenti" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Momento 1"></button>
+                            <button type="button" data-bs-target="#carouselMomenti" data-bs-slide-to="1" aria-label="Momento 2"></button>
+                            <button type="button" data-bs-target="#carouselMomenti" data-bs-slide-to="2" aria-label="Momento 3"></button>
+                            <button type="button" data-bs-target="#carouselMomenti" data-bs-slide-to="3" aria-label="Momento 4"></button>
+                            <button type="button" data-bs-target="#carouselMomenti" data-bs-slide-to="4" aria-label="Momento 5"></button>
+                            <button type="button" data-bs-target="#carouselMomenti" data-bs-slide-to="5" aria-label="Momento 6"></button>
+                            <button type="button" data-bs-target="#carouselMomenti" data-bs-slide-to="6" aria-label="Momento 7"></button>
+                            <button type="button" data-bs-target="#carouselMomenti" data-bs-slide-to="7" aria-label="Momento 8"></button>
+                            <button type="button" data-bs-target="#carouselMomenti" data-bs-slide-to="8" aria-label="Momento 9"></button>
+                        </div>
+
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="foto/sentieri/ortosensoriale1.jpeg" class="d-block w-100" alt="Il giardino sensoriale a Montecenere">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/sentieri/bambini_ed_adolascenti.jpg" class="d-block w-100" alt="Bambini e adolescenti al progetto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/sentieri/laboratorio_emozioni.jpg" class="d-block w-100" alt="Laboratorio di intelligenza emotiva con Alberto Genziani">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/sentieri/murale_collettivo.jpg" class="d-block w-100" alt="Il murale collettivo realizzato al Casone">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/sentieri/arte_espressiva.jpg" class="d-block w-100" alt="Arte espressiva durante il laboratorio di Chiara Orsi">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/sentieri/intelligenza_emotiva.jpg" class="d-block w-100" alt="Sessione sull'intelligenza emotiva con i bambini">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/sentieri/pittura_intuitiva2.jpg" class="d-block w-100" alt="Laboratorio di pittura intuitiva">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/sentieri/festa_insieme_prato.jpg" class="d-block w-100" alt="La Festa Insieme del 23 maggio">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto/sentieri/festa_insieme_giardino1.jpg" class="d-block w-100" alt="Il frutteto durante la Festa Insieme">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMomenti" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Precedente</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMomenti" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Successiva</span>
+                        </button>
                     </div>
                 </div>
             </div>
