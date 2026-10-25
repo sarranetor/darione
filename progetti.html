@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Nostri Progetti - Associazione Juter</title>
+    <title data-en="Our Projects - Juter Association">I Nostri Progetti - Associazione Juter</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -14,6 +14,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="lang.js"></script>
 
     <style>
         html, body {
@@ -131,6 +132,11 @@
                 height: 220px;
             }
         }
+        @media (min-width: 992px) {
+            .progetto-img {
+                max-height: 340px;
+            }
+        }
         .year-badge {
             display: inline-flex;
             align-items: center;
@@ -167,6 +173,40 @@
             transform: translateX(6px);
         }
 
+        .badge-erasmus {
+            background: #e8eefa;
+            border-color: #a9bde6;
+            color: #003399;
+        }
+        .divider-erasmus {
+            background: #003399;
+        }
+        .erasmus-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            height: 100%;
+            min-height: 240px;
+            background: linear-gradient(135deg, #003399 0%, #1f5fbf 100%);
+        }
+        .erasmus-panel i {
+            font-size: 4.5rem;
+            color: #FFCC00;
+        }
+        .erasmus-panel span {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: 0.03em;
+        }
+        @media (max-width: 991.98px) {
+            .erasmus-panel {
+                height: 220px;
+            }
+        }
+
         @media (max-width: 768px) {
             .page-header-short {
                 background-attachment: scroll !important;
@@ -185,6 +225,10 @@
                 <i class="fas fa-seedling me-2"></i>
                 Juter
             </a>
+            <div class="lang-switch ms-auto ms-lg-3 me-2 me-lg-0 order-lg-last" role="group" aria-label="Lingua / Language">
+                <button type="button" data-set-lang="it">IT</button>
+                <button type="button" data-set-lang="en">EN</button>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -194,16 +238,16 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#chisiamo-section">Chi Siamo</a>
+                        <a class="nav-link" href="index.html#chisiamo-section"><span data-lang="it">Chi Siamo</span><span data-lang="en">About Us</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="progetti.html" aria-current="page">Progetti</a>
+                        <a class="nav-link active" href="progetti.html" aria-current="page"><span data-lang="it">Progetti</span><span data-lang="en">Projects</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="news.html">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contatti">Contatti</a>
+                        <a class="nav-link" href="#contatti"><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></a>
                     </li>
                 </ul>
             </div>
@@ -216,10 +260,11 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center hero-content">
                     <h1 class="display-3 fw-bold text-white mb-3" data-aos="fade-up">
-                        I Nostri Progetti
+                        <span data-lang="it">I Nostri Progetti</span><span data-lang="en">Our Projects</span>
                     </h1>
                     <p class="lead text-white mb-0" data-aos="fade-up" data-aos-delay="100">
-                        Le iniziative che portiamo avanti sul territorio, anno dopo anno.
+                        <span data-lang="it">Le iniziative che portiamo avanti sul territorio, anno dopo anno.</span>
+                        <span data-lang="en">The initiatives we carry out in our community, year after year.</span>
                     </p>
                 </div>
             </div>
@@ -231,9 +276,10 @@
 
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
-                    <h2 class="display-5 fw-bold mb-3">Le Nostre Iniziative</h2>
+                    <h2 class="display-5 fw-bold mb-3"><span data-lang="it">Le Nostre Iniziative</span><span data-lang="en">Our Initiatives</span></h2>
                     <p class="lead text-muted">
-                        Un percorso che cresce di anno in anno, progetto dopo progetto.
+                        <span data-lang="it">Un percorso che cresce di anno in anno, progetto dopo progetto.</span>
+                        <span data-lang="en">A journey that grows year after year, project after project.</span>
                     </p>
                     <div class="divider-brand mx-auto"></div>
                 </div>
@@ -241,19 +287,45 @@
 
             <div class="row g-4">
                 <div class="col-12" data-aos="fade-up">
-                    <a href="sentieri.html" class="progetto-row-link">
+                    <a href="eterogenea.html" class="progetto-row-link">
                         <div class="progetto-card">
                             <div class="row g-0 align-items-stretch">
                                 <div class="col-lg-5">
-                                    <img src="foto/sentieri/bambini_ed_adolascenti.jpg" alt="Progetto Sentieri del sentire" class="progetto-img">
+                                    <img src="foto/eterogenea/spazio_anderlini.jpeg" alt="Lo spazio di via Anderlini a Modena" data-alt-en="The space in via Anderlini, Modena" class="progetto-img">
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="progetto-content">
+                                        <span class="year-badge">2026–2027</span>
+                                        <div class="icon" style="color: #CC5500;"><i class="fas fa-people-roof"></i></div>
+                                        <h3 class="h3">Eterogenea</h3>
+                                        <p class="text-muted">
+                                            <span data-lang="it">Natura, comunicazione, giochi e meditazione nel bene confiscato di via Anderlini, a Modena.</span>
+                                            <span data-lang="en">Nature, communication, games and meditation in the confiscated property in via Anderlini, Modena.</span>
+                                        </p>
+                                        <span class="progetto-cta" style="color: #CC5500;"><span data-lang="it">Scopri il progetto</span><span data-lang="en">Discover the project</span> <i class="fas fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12" data-aos="fade-up">
+                    <a href="sentieri.html" class="progetto-row-link">
+                        <div class="progetto-card">
+                            <div class="row g-0 align-items-stretch flex-lg-row-reverse">
+                                <div class="col-lg-5">
+                                    <img src="foto/sentieri/bambini_ed_adolascenti.jpg" alt="Progetto Sentieri del sentire" data-alt-en="Sentieri del sentire project" class="progetto-img">
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="progetto-content">
                                         <span class="year-badge">2026</span>
                                         <div class="icon" style="color: #556B2F;"><i class="fas fa-seedling"></i></div>
                                         <h3 class="h3">Sentieri del sentire</h3>
-                                        <p class="text-muted">Un percorso di natura, emozioni e comunità a Montecenere.</p>
-                                        <span class="progetto-cta" style="color: #556B2F;">Scopri il progetto <i class="fas fa-arrow-right"></i></span>
+                                        <p class="text-muted">
+                                            <span data-lang="it">Un percorso di natura, emozioni e comunità a Montecenere.</span>
+                                            <span data-lang="en">A journey of nature, emotions and community in Montecenere.</span>
+                                        </p>
+                                        <span class="progetto-cta" style="color: #556B2F;"><span data-lang="it">Scopri il progetto</span><span data-lang="en">Discover the project</span> <i class="fas fa-arrow-right"></i></span>
                                     </div>
                                 </div>
                             </div>
@@ -263,17 +335,62 @@
                 <div class="col-12" data-aos="fade-up">
                     <a href="liberamente.html" class="progetto-row-link">
                         <div class="progetto-card">
-                            <div class="row g-0 align-items-stretch flex-lg-row-reverse">
+                            <div class="row g-0 align-items-stretch">
                                 <div class="col-lg-5">
-                                    <img src="foto/liberamente/evento1.jpeg" alt="Progetto Libera-mente" class="progetto-img">
+                                    <img src="foto/liberamente/evento1.jpeg" alt="Progetto Libera-mente" data-alt-en="Libera-mente project" class="progetto-img">
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="progetto-content">
                                         <span class="year-badge">2025</span>
                                         <div class="icon" style="color: #667eea;"><i class="fas fa-palette"></i></div>
                                         <h3 class="h3">Libera-mente</h3>
-                                        <p class="text-muted">Arte, Emozioni e Consapevolezza in Carcere</p>
-                                        <span class="progetto-cta" style="color: #667eea;">Scopri il progetto <i class="fas fa-arrow-right"></i></span>
+                                        <p class="text-muted">
+                                            <span data-lang="it">Arte, Emozioni e Consapevolezza in Carcere</span>
+                                            <span data-lang="en">Art, Emotions and Awareness in Prison</span>
+                                        </p>
+                                        <span class="progetto-cta" style="color: #667eea;"><span data-lang="it">Scopri il progetto</span><span data-lang="en">Discover the project</span> <i class="fas fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ERASMUS+ -->
+            <div class="row mt-5 pt-5 mb-5">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-3"><span data-lang="it">Progetti Europei Erasmus+</span><span data-lang="en">European Erasmus+ Projects</span></h2>
+                    <p class="lead text-muted">
+                        <span data-lang="it">Esperienze europee di formazione e scambio a cui partecipiamo insieme ad associazioni di altri Paesi.</span>
+                        <span data-lang="en">European training and exchange experiences we take part in together with organisations from other countries.</span>
+                    </p>
+                    <div class="divider-brand divider-erasmus mx-auto"></div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12" data-aos="fade-up">
+                    <a href="embodied-belonging.html" class="progetto-row-link">
+                        <div class="progetto-card">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-5">
+                                    <div class="erasmus-panel">
+                                        <i class="fas fa-earth-europe"></i>
+                                        <span>Erasmus+</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="progetto-content">
+                                        <span class="year-badge badge-erasmus me-2">Partner</span>
+                                        <span class="year-badge badge-erasmus"><span data-lang="it">Gen 2027 · Lettonia</span><span data-lang="en">Jan 2027 · Latvia</span></span>
+                                        <div class="icon" style="color: #003399;"><i class="fas fa-person-walking"></i></div>
+                                        <h3 class="h3">Embodied Belonging</h3>
+                                        <p class="text-muted">
+                                            <span data-lang="it">Training Course di 10 giorni su pratiche eco-somatiche, natura, movimento e comunicazione nonviolenta.</span>
+                                            <span data-lang="en">A 10-day Training Course on eco-somatic practices, nature, movement and Nonviolent Communication.</span>
+                                        </p>
+                                        <span class="progetto-cta" style="color: #003399;"><span data-lang="it">Scopri il progetto</span><span data-lang="en">Discover the project</span> <i class="fas fa-arrow-right"></i></span>
                                     </div>
                                 </div>
                             </div>
@@ -289,14 +406,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">Chi Siamo</h5>
-                    <p class="text-muted">
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Chi Siamo</span><span data-lang="en">About Us</span></h5>
+                    <p class="text-muted" data-lang="it">
                         Juter è un'associazione modenese e 'juter'
                         deriva dalla parola dialettale 'aiutare'.
                     </p>
+                    <p class="text-muted" data-lang="en">
+                        Juter is an association from Modena: 'juter'
+                        is the local dialect word for 'to help'.
+                    </p>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">Contatti</h5>
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></h5>
                     <ul class="list-unstyled text-muted">
                         <li class="mb-2">
                             <i class="fas fa-envelope me-2"></i> juterodv@gmail.com
@@ -310,7 +431,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">Seguici</h5>
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Seguici</span><span data-lang="en">Follow Us</span></h5>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=61586262233188" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
                         <a href="https://www.instagram.com/juter_odv/" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
@@ -320,7 +441,7 @@
             </div>
             <hr class="my-4 bg-secondary">
             <div class="text-center text-muted">
-                <p class="mb-0">&copy; 2025 Juter. Tutti i diritti riservati.</p>
+                <p class="mb-0">&copy; 2025 Juter. <span data-lang="it">Tutti i diritti riservati.</span><span data-lang="en">All rights reserved.</span></p>
             </div>
         </div>
     </footer>

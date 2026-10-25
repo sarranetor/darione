@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Sentieri del Sentire - Juter ODV</title>
+    <title data-en="I Sentieri del Sentire (Paths of Feeling) - Juter ODV">I Sentieri del Sentire - Juter ODV</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -14,6 +14,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="lang.js"></script>
 
     <style>
         html, body {
@@ -258,6 +259,10 @@
                 <i class="fas fa-seedling me-2"></i>
                 Juter
             </a>
+            <div class="lang-switch ms-auto ms-lg-3 me-2 me-lg-0 order-lg-last" role="group" aria-label="Lingua / Language">
+                <button type="button" data-set-lang="it">IT</button>
+                <button type="button" data-set-lang="en">EN</button>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -267,16 +272,16 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#chisiamo-section">Chi Siamo</a>
+                        <a class="nav-link" href="index.html#chisiamo-section"><span data-lang="it">Chi Siamo</span><span data-lang="en">About Us</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="progetti.html">Progetti</a>
+                        <a class="nav-link" href="progetti.html"><span data-lang="it">Progetti</span><span data-lang="en">Projects</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="news.html">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contatti">Contatti</a>
+                        <a class="nav-link" href="#contatti"><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></a>
                     </li>
                 </ul>
             </div>
@@ -292,12 +297,14 @@
                         I Sentieri del Sentire
                     </h1>
                     <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="100">
-                        Un percorso di natura, emozioni e comunità a Montecenere.
+                        <span data-lang="it">Un percorso di natura, emozioni e comunità a Montecenere.</span>
+                        <span data-lang="en">A journey of nature, emotions and community in Montecenere.</span>
                     </p>
                     <div data-aos="fade-up" data-aos-delay="200">
                         <span class="fondazione-badge">
                             <i class="fas fa-hands-helping"></i>
-                            Con il supporto di Fondazione di Modena
+                            <span data-lang="it">Con il supporto di Fondazione di Modena</span>
+                            <span data-lang="en">Supported by Fondazione di Modena</span>
                         </span>
                     </div>
                 </div>
@@ -311,12 +318,18 @@
             <!-- INTRO -->
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
-                    <h2 class="display-5 fw-bold mb-3" style="color: #333333 !important;">Un Progetto, Tante Storie</h2>
-                    <p class="lead text-muted">
+                    <h2 class="display-5 fw-bold mb-3" style="color: #333333 !important;"><span data-lang="it">Un Progetto, Tante Storie</span><span data-lang="en">One Project, Many Stories</span></h2>
+                    <p class="lead text-muted" data-lang="it">
                         "I Sentieri del Sentire" è un progetto promosso da Juter ODV e sostenuto da <strong>Fondazione di Modena</strong>.
                         Da marzo a maggio 2026, bambini, adolescenti e famiglie si sono ritrovati ogni mese a
-                        <strong><strong>Montecenere, nell'Appennino Modenese</strong></strong>, per vivere esperienze a contatto con la natura,
+                        <strong>Montecenere, nell'Appennino Modenese</strong>, per vivere esperienze a contatto con la natura,
                         imparare a riconoscere le proprie emozioni e costruire qualcosa insieme con le proprie mani.
+                    </p>
+                    <p class="lead text-muted" data-lang="en">
+                        "I Sentieri del Sentire" (Paths of Feeling) is a project run by Juter ODV and supported by <strong>Fondazione di Modena</strong>.
+                        From March to May 2026, children, teenagers and families met every month in
+                        <strong>Montecenere, in the Modena Apennines</strong>, to enjoy experiences in nature,
+                        learn to recognise their emotions and build something together with their own hands.
                     </p>
                     <div class="divider-brand mx-auto"></div>
                 </div>
@@ -327,29 +340,29 @@
                 <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="0">
                     <div class="stat-card">
                         <div class="stat-number">6</div>
-                        <div class="stat-label">Incontri</div>
-                        <div class="stat-desc">Da marzo a maggio 2026</div>
+                        <div class="stat-label"><span data-lang="it">Incontri</span><span data-lang="en">Meetings</span></div>
+                        <div class="stat-desc"><span data-lang="it">Da marzo a maggio 2026</span><span data-lang="en">From March to May 2026</span></div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="stat-card">
                         <div class="stat-number">20+</div>
-                        <div class="stat-label">Bambini</div>
-                        <div class="stat-desc">Ragazzi protagonisti del progetto</div>
+                        <div class="stat-label"><span data-lang="it">Bambini</span><span data-lang="en">Children</span></div>
+                        <div class="stat-desc"><span data-lang="it">Ragazzi protagonisti del progetto</span><span data-lang="en">Young people at the heart of the project</span></div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
                     <div class="stat-card">
                         <div class="stat-number">15+</div>
-                        <div class="stat-label">Famiglie Coinvolte</div>
-                        <div class="stat-desc">Genitori e famiglie partecipanti</div>
+                        <div class="stat-label"><span data-lang="it">Famiglie Coinvolte</span><span data-lang="en">Families Involved</span></div>
+                        <div class="stat-desc"><span data-lang="it">Genitori e famiglie partecipanti</span><span data-lang="en">Participating parents and families</span></div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
                     <div class="stat-card">
                         <div class="stat-number">3</div>
-                        <div class="stat-label">Spazi Verdi Creati</div>
-                        <div class="stat-desc">Giardino sensoriale, frutteto e orto</div>
+                        <div class="stat-label"><span data-lang="it">Spazi Verdi Creati</span><span data-lang="en">Green Spaces Created</span></div>
+                        <div class="stat-desc"><span data-lang="it">Giardino sensoriale, frutteto e orto</span><span data-lang="en">Sensory garden, orchard and vegetable garden</span></div>
                     </div>
                 </div>
             </div>
@@ -364,17 +377,28 @@
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="content-card">
                         <div class="icon"><i class="fas fa-seedling"></i></div>
-                        <h3 class="h2 mb-3">Mani nella Terra</h3>
-                        <p class="text-muted">
+                        <h3 class="h2 mb-3"><span data-lang="it">Mani nella Terra</span><span data-lang="en">Hands in the Soil</span></h3>
+                        <p class="text-muted" data-lang="it">
                             Il cuore del progetto sono i tre spazi verdi che i partecipanti hanno creato e curato nel tempo:
                             un <strong>giardino sensoriale</strong> piantato dai bambini, un <strong>frutteto</strong> con alberi ancora in acclimatazione
                             e un <strong>orto</strong> dove hanno seminato pomodori, irrigato e pacciamato con le proprie mani.
                         </p>
-                        <p class="text-muted mt-3">
+                        <p class="text-muted" data-lang="en">
+                            The heart of the project is the three green spaces that participants created and looked after over time:
+                            a <strong>sensory garden</strong> planted by the children, an <strong>orchard</strong> with trees still settling in,
+                            and a <strong>vegetable garden</strong> where they sowed tomatoes, watered and mulched with their own hands.
+                        </p>
+                        <p class="text-muted mt-3" data-lang="it">
                             A guidare i ragazzi in questo percorso c'era anche <strong>Claudia Ferrari</strong>, esperta di agricoltura naturale,
                             accompagnata dal marito Ugo e dalla mamma Gina. Una famiglia che ha portato al progetto
                             energia, passione e conoscenze tramandate: dalla cura delle piante alla produzione alimentare,
                             con quella filosofia semplice e autentica di <em>"persone che aiutano persone"</em>.
+                        </p>
+                        <p class="text-muted mt-3" data-lang="en">
+                            Guiding the young people along the way was <strong>Claudia Ferrari</strong>, an expert in natural farming,
+                            together with her husband Ugo and her mother Gina. A family that brought to the project
+                            energy, passion and knowledge handed down through generations: from caring for plants to growing food,
+                            with that simple, genuine philosophy of <em>"people helping people"</em>.
                         </p>
                     </div>
                 </div>
@@ -383,20 +407,29 @@
             <!-- BLOCK B: IL BOSCO CHE INSEGNA -->
             <div class="row align-items-stretch g-4 flex-lg-row-reverse mb-5">
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="foto/sentieri/bambini_ed_adolascenti.jpg" alt="Bambini nel bosco" class="img-fluid rounded shadow-lg mb-4 mb-lg-0" style="height: 100%; object-fit: cover;">
+                    <img src="foto/sentieri/bambini_ed_adolascenti.jpg" alt="Bambini nel bosco" data-alt-en="Children in the woods" class="img-fluid rounded shadow-lg mb-4 mb-lg-0" style="height: 100%; object-fit: cover;">
                 </div>
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="content-card">
                         <div class="icon"><i class="fas fa-tree"></i></div>
-                        <h3 class="h2 mb-3">Il Bosco che Insegna</h3>
-                        <p class="text-muted">
+                        <h3 class="h2 mb-3"><span data-lang="it">Il Bosco che Insegna</span><span data-lang="en">The Forest that Teaches</span></h3>
+                        <p class="text-muted" data-lang="it">
                             Con la guida di <strong>Luca Braglia</strong>, esperto di erbe selvatiche, i partecipanti hanno esplorato i boschi
                             dell'Appennino Modenese imparando a riconoscere le piante spontanee: quelle commestibili, quelle medicinali
                             e quelle da evitare.
                         </p>
-                        <p class="text-muted mt-3">
+                        <p class="text-muted" data-lang="en">
+                            Guided by <strong>Luca Braglia</strong>, an expert in wild herbs, participants explored the woods
+                            of the Modena Apennines and learned to recognise wild plants: the edible ones, the medicinal ones
+                            and the ones to avoid.
+                        </p>
+                        <p class="text-muted mt-3" data-lang="it">
                             Una passeggiata che si è trasformata in una lezione di umiltà e rispetto:
                             <em>"Conoscere le piante è complesso, ma imparare ad ammirarle e rispettarle è quello che conta davvero."</em>
+                        </p>
+                        <p class="text-muted mt-3" data-lang="en">
+                            A walk that became a lesson in humility and respect:
+                            <em>"Knowing plants is complex, but learning to admire and respect them is what really matters."</em>
                         </p>
                     </div>
                 </div>
@@ -405,22 +438,33 @@
             <!-- BLOCK C: EMOZIONI IN GIOCO -->
             <div class="row align-items-stretch g-4 mb-5">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="foto/sentieri/pittura_intuitiva2.jpg" alt="Laboratorio di pittura intuitiva" class="img-fluid rounded shadow-lg mb-4 mb-lg-0" style="height: 100%; object-fit: cover;">
+                    <img src="foto/sentieri/pittura_intuitiva2.jpg" alt="Laboratorio di pittura intuitiva" data-alt-en="Intuitive painting workshop" class="img-fluid rounded shadow-lg mb-4 mb-lg-0" style="height: 100%; object-fit: cover;">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="content-card">
                         <div class="icon"><i class="fas fa-heart"></i></div>
-                        <h3 class="h2 mb-3">Emozioni in Gioco</h3>
-                        <p class="text-muted">
+                        <h3 class="h2 mb-3"><span data-lang="it">Emozioni in Gioco</span><span data-lang="en">Emotions at Play</span></h3>
+                        <p class="text-muted" data-lang="it">
                             <strong>Alberto Genziani</strong>, educatore esperto di intelligenza emotiva, ha guidato i bambini
                             attraverso cinque zone, ognuna dedicata a un'emozione diversa. Con l'aiuto dei burattini,
                             i piccoli hanno imparato che le emozioni non sono né giuste né sbagliate: vanno capite e vissute.
                         </p>
-                        <p class="text-muted mt-3">
+                        <p class="text-muted" data-lang="en">
+                            <strong>Alberto Genziani</strong>, an educator specialised in emotional intelligence, led the children
+                            through five zones, each dedicated to a different emotion. With the help of puppets,
+                            the little ones learned that emotions are neither right nor wrong: they are to be understood and lived.
+                        </p>
+                        <p class="text-muted mt-3" data-lang="it">
                             <strong>Chiara Orsi</strong>, laureata in psicologia con specializzazione in Outdoor Education,
                             ha condotto un laboratorio di pittura intuitiva: <em>"Le emozioni non si spiegano, si colorano."</em>
                             Il risultato? Un murale collettivo al Casone, fatto di segni, colori e storie di ognuno.
                             Mentre i bambini giocavano, i genitori avevano il loro spazio protetto per parlare di genitorialità consapevole.
+                        </p>
+                        <p class="text-muted mt-3" data-lang="en">
+                            <strong>Chiara Orsi</strong>, a psychology graduate specialised in Outdoor Education,
+                            ran an intuitive painting workshop: <em>"Emotions are not explained, they are coloured."</em>
+                            The result? A collective mural at the Casone, made of everyone's marks, colours and stories.
+                            While the children played, parents had their own safe space to talk about mindful parenting.
                         </p>
                     </div>
                 </div>
@@ -433,20 +477,31 @@
                         <div style="font-size: 3.5rem; color: #CC5500; margin-bottom: 1rem;">
                             <i class="fas fa-star"></i>
                         </div>
-                        <h2 class="fw-bold mb-3" style="color: #333333 !important;">La Festa del Raccolto</h2>
-                        <p class="lead text-muted mb-4">
+                        <h2 class="fw-bold mb-3" style="color: #333333 !important;"><span data-lang="it">La Festa del Raccolto</span><span data-lang="en">The Harvest Celebration</span></h2>
+                        <p class="lead text-muted mb-4" data-lang="it">
                             Il 23 maggio si è tenuta la <strong>Festa Insieme</strong>: la celebrazione finale del progetto,
                             aperta a tutti. La musica di un sassofono ha accompagnato il pomeriggio, le famiglie hanno portato
                             cibo da condividere e i bambini hanno fatto da guida ai tre spazi verdi che loro stessi avevano
                             creato in questi mesi.
                         </p>
+                        <p class="lead text-muted mb-4" data-lang="en">
+                            On 23 May we held the <strong>Festa Insieme</strong> (Celebrating Together): the closing celebration of the project,
+                            open to everyone. A saxophone played through the afternoon, families brought
+                            food to share and the children guided visitors around the three green spaces they had
+                            created themselves over the months.
+                        </p>
                         <blockquote class="text-start mx-auto" style="max-width: 600px;">
-                            "Ci sono giornate che ti lasciano addosso una scia di gratitudine difficile da spiegare a parole."
-                            <footer>— Juter ODV, 23 maggio 2026</footer>
+                            <span data-lang="it">"Ci sono giornate che ti lasciano addosso una scia di gratitudine difficile da spiegare a parole."</span>
+                            <span data-lang="en">"Some days leave you with a trail of gratitude that is hard to put into words."</span>
+                            <footer>— Juter ODV, <span data-lang="it">23 maggio 2026</span><span data-lang="en">23 May 2026</span></footer>
                         </blockquote>
-                        <p class="text-muted">
+                        <p class="text-muted" data-lang="it">
                             Non era una conclusione. Era l'inizio di qualcosa che continua a crescere —
                             come gli alberi del frutteto che stanno ancora prendendo radici.
+                        </p>
+                        <p class="text-muted" data-lang="en">
+                            It was not an ending. It was the beginning of something that keeps growing —
+                            like the orchard trees that are still taking root.
                         </p>
                     </div>
                 </div>
@@ -455,8 +510,9 @@
             <!-- GALLERY -->
             <div class="row mt-5 gallery-sentieri">
                 <div class="col-12 text-center mb-4" data-aos="fade-up">
-                    <h3 class="h2 fw-bold" style="color: #333333 !important;">I Nostri Momenti nel Verde</h3>
-                    <p class="text-muted">Scorci dal giardino, dall'orto e dagli incontri di "I Sentieri del Sentire". <br>Clicca sulle frecce per scorrere o attendi la rotazione automatica.</p>
+                    <h3 class="h2 fw-bold" style="color: #333333 !important;"><span data-lang="it">I Nostri Momenti nel Verde</span><span data-lang="en">Our Moments in Nature</span></h3>
+                    <p class="text-muted" data-lang="it">Scorci dal giardino, dall'orto e dagli incontri di "I Sentieri del Sentire". <br>Clicca sulle frecce per scorrere o attendi la rotazione automatica.</p>
+                    <p class="text-muted" data-lang="en">Glimpses of the garden, the vegetable plot and the meetings of "I Sentieri del Sentire". <br>Use the arrows to browse or wait for the automatic rotation.</p>
                 </div>
 
                 <div class="col-lg-10 mx-auto" data-aos="fade-up">
@@ -475,41 +531,41 @@
 
                         <div class="carousel-inner rounded">
                             <div class="carousel-item active">
-                                <img src="foto/sentieri/ortosensoriale1.jpeg" class="d-block w-100" alt="Il giardino sensoriale a Montecenere">
+                                <img src="foto/sentieri/ortosensoriale1.jpeg" class="d-block w-100" alt="Il giardino sensoriale a Montecenere" data-alt-en="The sensory garden in Montecenere">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/sentieri/bambini_ed_adolascenti.jpg" class="d-block w-100" alt="Bambini e adolescenti al progetto">
+                                <img src="foto/sentieri/bambini_ed_adolascenti.jpg" class="d-block w-100" alt="Bambini e adolescenti al progetto" data-alt-en="Children and teenagers at the project">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/sentieri/laboratorio_emozioni.jpg" class="d-block w-100" alt="Laboratorio di intelligenza emotiva con Alberto Genziani">
+                                <img src="foto/sentieri/laboratorio_emozioni.jpg" class="d-block w-100" alt="Laboratorio di intelligenza emotiva con Alberto Genziani" data-alt-en="Emotional intelligence workshop with Alberto Genziani">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/sentieri/murale_collettivo.jpg" class="d-block w-100" alt="Il murale collettivo realizzato al Casone">
+                                <img src="foto/sentieri/murale_collettivo.jpg" class="d-block w-100" alt="Il murale collettivo realizzato al Casone" data-alt-en="The collective mural painted at the Casone">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/sentieri/arte_espressiva.jpg" class="d-block w-100" alt="Arte espressiva durante il laboratorio di Chiara Orsi">
+                                <img src="foto/sentieri/arte_espressiva.jpg" class="d-block w-100" alt="Arte espressiva durante il laboratorio di Chiara Orsi" data-alt-en="Expressive art during Chiara Orsi's workshop">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/sentieri/intelligenza_emotiva.jpg" class="d-block w-100" alt="Sessione sull'intelligenza emotiva con i bambini">
+                                <img src="foto/sentieri/intelligenza_emotiva.jpg" class="d-block w-100" alt="Sessione sull'intelligenza emotiva con i bambini" data-alt-en="Emotional intelligence session with the children">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/sentieri/pittura_intuitiva2.jpg" class="d-block w-100" alt="Laboratorio di pittura intuitiva">
+                                <img src="foto/sentieri/pittura_intuitiva2.jpg" class="d-block w-100" alt="Laboratorio di pittura intuitiva" data-alt-en="Intuitive painting workshop">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/sentieri/festa_insieme_prato.jpg" class="d-block w-100" alt="La Festa Insieme del 23 maggio">
+                                <img src="foto/sentieri/festa_insieme_prato.jpg" class="d-block w-100" alt="La Festa Insieme del 23 maggio" data-alt-en="The Festa Insieme on 23 May">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/sentieri/festa_insieme_giardino1.jpg" class="d-block w-100" alt="Il frutteto durante la Festa Insieme">
+                                <img src="foto/sentieri/festa_insieme_giardino1.jpg" class="d-block w-100" alt="Il frutteto durante la Festa Insieme" data-alt-en="The orchard during the Festa Insieme">
                             </div>
                         </div>
 
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselMomenti" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Precedente</span>
+                            <span class="visually-hidden"><span data-lang="it">Precedente</span><span data-lang="en">Previous</span></span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselMomenti" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Successiva</span>
+                            <span class="visually-hidden"><span data-lang="it">Successiva</span><span data-lang="en">Next</span></span>
                         </button>
                     </div>
                 </div>
@@ -521,17 +577,22 @@
                     <div class="icon" style="font-size: 3rem; color: #556B2F; margin-bottom: 1.5rem;">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
-                    <h2 class="fw-bold mb-3" style="color: #333333 !important;">Vuoi Partecipare al Prossimo Ciclo?</h2>
-                    <p class="text-muted fs-5 mb-4">
+                    <h2 class="fw-bold mb-3" style="color: #333333 !important;"><span data-lang="it">Vuoi Partecipare al Prossimo Ciclo?</span><span data-lang="en">Want to Join the Next Cycle?</span></h2>
+                    <p class="text-muted fs-5 mb-4" data-lang="it">
                         "I Sentieri del Sentire" continua a crescere. Se sei interessato a portare i tuoi figli,
                         a collaborare come esperto o semplicemente a scoprire il nostro giardino sensoriale a Montecenere,
                         scrivici — saremo felici di accoglierti.
                     </p>
+                    <p class="text-muted fs-5 mb-4" data-lang="en">
+                        "I Sentieri del Sentire" keeps growing. If you would like to bring your children,
+                        collaborate as an expert or simply discover our sensory garden in Montecenere,
+                        write to us — we will be happy to welcome you.
+                    </p>
                     <a href="#contatti" class="btn btn-brand btn-lg px-5 me-3 mb-2">
-                        <i class="fas fa-envelope me-2"></i>Contattaci
+                        <i class="fas fa-envelope me-2"></i><span data-lang="it">Contattaci</span><span data-lang="en">Contact us</span>
                     </a>
                     <a href="index.html#chisiamo-section" class="btn btn-outline-brand btn-lg px-5 mb-2">
-                        <i class="fas fa-users me-2"></i>Chi Siamo
+                        <i class="fas fa-users me-2"></i><span data-lang="it">Chi Siamo</span><span data-lang="en">About Us</span>
                     </a>
                 </div>
             </div>
@@ -543,14 +604,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">Chi Siamo</h5>
-                    <p class="text-muted">
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Chi Siamo</span><span data-lang="en">About Us</span></h5>
+                    <p class="text-muted" data-lang="it">
                         Juter è un'associazione modenese e 'juter'
                         deriva dalla parola dialettale 'aiutare'.
                     </p>
+                    <p class="text-muted" data-lang="en">
+                        Juter is an association from Modena: 'juter'
+                        is the local dialect word for 'to help'.
+                    </p>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">Contatti</h5>
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></h5>
                     <ul class="list-unstyled text-muted">
                         <li class="mb-2">
                             <i class="fas fa-envelope me-2"></i> juterodv@gmail.com
@@ -564,7 +629,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">Seguici</h5>
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Seguici</span><span data-lang="en">Follow Us</span></h5>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=61586262233188" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
                         <a href="https://www.instagram.com/juter_odv/" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
@@ -574,7 +639,7 @@
             </div>
             <hr class="my-4 bg-secondary">
             <div class="text-center text-muted">
-                <p class="mb-0">&copy; 2026 Juter. Tutti i diritti riservati.</p>
+                <p class="mb-0">&copy; 2026 Juter. <span data-lang="it">Tutti i diritti riservati.</span><span data-lang="en">All rights reserved.</span></p>
             </div>
         </div>
     </footer>

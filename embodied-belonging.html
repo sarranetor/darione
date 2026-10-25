@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Embodied Belonging - Erasmus+ Training Course - Juter ODV">Embodied Belonging - Training Course Erasmus+ - Juter ODV</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="lang.js"></script>
+
+    <style>
+        :root {
+            --colore-erasmus: #003399;   /* Blu europeo */
+            --colore-erasmus-chiaro: #e8eefa;
+            --colore-erasmus-giallo: #FFCC00;
+        }
+
+        html, body {
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #F5F5DC !important;
+            color: #333333;
+        }
+
+        h1, h2, h3, h4, h5,
+        .navbar-brand,
+        .page-header-short h1
+        {
+            color: #faf3f3 !important;
+        }
+
+        .page-header-short h1, .page-header-short .lead {
+            color: #FFFFFF !important;
+        }
+
+        .navbar-dark .navbar-brand,
+        .navbar-dark .nav-link {
+            color: #FFFFFF !important;
+        }
+
+        footer {
+            background-color: #333333 !important;
+        }
+        footer h5 {
+             color: #FFFFFF !important;
+        }
+        .text-muted {
+            color: #5a5a5a !important;
+        }
+        footer .text-muted {
+            color: #adb5bd !important;
+        }
+
+        .btn-erasmus {
+            background-color: var(--colore-erasmus) !important;
+            color: #FFFFFF !important;
+            font-weight: 700;
+            border-radius: 50px !important;
+            transition: all 0.3s ease;
+        }
+        .btn-erasmus:hover {
+            background-color: #002266 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline-erasmus {
+            border-color: var(--colore-erasmus) !important;
+            color: var(--colore-erasmus) !important;
+            border-radius: 50px !important;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-erasmus:hover {
+            background-color: var(--colore-erasmus) !important;
+            color: #FFFFFF !important;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .page-header-short {
+            position: relative;
+            background-image: url('foto/albero_vita_1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+        .page-header-short .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 34, 102, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%) !important;
+        }
+        .page-header-short .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .partner-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--colore-erasmus-chiaro);
+            border: 1px solid #a9bde6;
+            border-radius: 50px;
+            padding: 0.4rem 1rem;
+            font-size: 0.9rem;
+            color: var(--colore-erasmus);
+            font-weight: 600;
+        }
+
+        #progetto-erasmus {
+            background-color: #F5F5DC;
+        }
+        #progetto-erasmus h2,
+        #progetto-erasmus h3 {
+            color: #333333 !important;
+        }
+
+        .divider-erasmus {
+            width: 80px;
+            height: 4px;
+            background: var(--colore-erasmus);
+            margin-top: 1rem;
+            border-radius: 2px;
+        }
+
+        .content-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
+            height: 100%;
+        }
+        .content-card .icon,
+        .cta-icon {
+            font-size: 3rem;
+            color: var(--colore-erasmus);
+            margin-bottom: 1.5rem;
+        }
+
+        .role-card {
+            border-left: 6px solid var(--colore-erasmus-giallo);
+        }
+
+        .info-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            height: 100%;
+        }
+        .info-card .info-icon {
+            font-size: 2.25rem;
+            color: var(--colore-erasmus);
+            margin-bottom: 0.75rem;
+        }
+        .info-card .info-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--colore-erasmus);
+        }
+        .info-card .info-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333333;
+            margin-top: 0.5rem;
+        }
+        .info-card .info-desc {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+            margin-top: 0.25rem;
+        }
+
+        .icon-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .icon-list li {
+            position: relative;
+            padding-left: 2.25rem;
+            margin-bottom: 0.85rem;
+            color: #5a5a5a;
+        }
+        .icon-list li i {
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+            width: 1.5rem;
+            text-align: center;
+            color: var(--colore-erasmus);
+        }
+
+        .note-box {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            background: var(--colore-erasmus-chiaro);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            margin-top: 1.5rem;
+            color: #333333;
+            font-size: 0.95rem;
+        }
+        .note-box i {
+            color: var(--colore-erasmus);
+            margin-top: 0.2rem;
+        }
+
+        .closed-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #fdecea;
+            border: 1px solid #f5b7b1;
+            border-radius: 50px;
+            padding: 0.4rem 1.1rem;
+            font-weight: 700;
+            color: #b02a1c;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header-short {
+                background-attachment: scroll !important;
+            }
+            .page-header-short h1 {
+                font-size: 2.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" style="opacity: 1;" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-seedling me-2"></i>
+                Juter
+            </a>
+            <div class="lang-switch ms-auto ms-lg-3 me-2 me-lg-0 order-lg-last" role="group" aria-label="Lingua / Language">
+                <button type="button" data-set-lang="it">IT</button>
+                <button type="button" data-set-lang="en">EN</button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#chisiamo-section"><span data-lang="it">Chi Siamo</span><span data-lang="en">About Us</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progetti.html"><span data-lang="it">Progetti</span><span data-lang="en">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contatti"><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header-short">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center hero-content">
+                    <h1 class="display-3 fw-bold text-white mb-3" data-aos="fade-up">
+                        Embodied Belonging
+                    </h1>
+                    <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <span data-lang="it">Training Course Erasmus+ · Lettonia, 18–29 gennaio 2027</span>
+                        <span data-lang="en">Erasmus+ Training Course · Latvia, 18–29 January 2027</span>
+                    </p>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <span class="partner-badge">
+                            <i class="fas fa-handshake"></i>
+                            <span data-lang="it">Juter è partner del progetto</span>
+                            <span data-lang="en">Juter is a project partner</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="progetto-erasmus" class="py-5">
+        <div class="container">
+
+            <!-- INTRO -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-3"><span data-lang="it">Corpo, Natura e Appartenenza</span><span data-lang="en">Body, Nature and Belonging</span></h2>
+                    <p class="lead text-muted" data-lang="it">
+                        "Embodied Belonging" è un Training Course Erasmus+ di 10 giorni pensato per youth worker,
+                        formatori, facilitatori, educatori, space holder e volontari attivi che vogliono esplorare
+                        approcci corporei, creativi e in connessione con la natura per il benessere e la sostenibilità.
+                    </p>
+                    <p class="lead text-muted" data-lang="en">
+                        "Embodied Belonging" is a 10-day Erasmus+ Training Course designed for youth workers,
+                        trainers, facilitators, educators, space holders and active volunteers who want to explore
+                        body-based, nature-connected and creative approaches to well-being and sustainability.
+                    </p>
+                    <div class="divider-erasmus mx-auto"></div>
+                </div>
+            </div>
+
+            <!-- RUOLO DI JUTER -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto" data-aos="fade-up">
+                    <div class="content-card role-card">
+                        <div class="icon"><i class="fas fa-handshake"></i></div>
+                        <h3 class="h2 mb-3"><span data-lang="it">Il Nostro Ruolo</span><span data-lang="en">Our Role</span></h3>
+                        <p class="text-muted mb-0" data-lang="it">
+                            Juter non è l'organizzatore del progetto, ma uno dei <strong>partner</strong>.
+                            Diamo una mano nell'organizzazione, diffondiamo l'invito e
+                            cerchiamo i partecipanti in <strong>Italia</strong>.
+                        </p>
+                        <p class="text-muted mb-0" data-lang="en">
+                            Juter is not the organiser of the project but one of its <strong>partners</strong>.
+                            We lend a hand with the organisation, share the call and
+                            look for participants in <strong>Italy</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFO -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-sm-6" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+                        <div class="info-label"><span data-lang="it">Dove</span><span data-lang="en">Where</span></div>
+                        <div class="info-value">Laumas Guest House</div>
+                        <div class="info-desc">
+                            <span data-lang="it">Comune di Talsi, Lettonia. Un luogo tranquillo circondato dal bosco.</span>
+                            <span data-lang="en">Talsi Municipality, Latvia. A peaceful place surrounded by forest.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-calendar-days"></i></div>
+                        <div class="info-label"><span data-lang="it">Quando</span><span data-lang="en">When</span></div>
+                        <div class="info-value"><span data-lang="it">18–29 gennaio 2027</span><span data-lang="en">18–29 January 2027</span></div>
+                        <div class="info-desc"><span data-lang="it">10 giorni di formazione</span><span data-lang="en">10 days of training</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-users"></i></div>
+                        <div class="info-label"><span data-lang="it">Partecipanti</span><span data-lang="en">Participants</span></div>
+                        <div class="info-value"><span data-lang="it">28 persone</span><span data-lang="en">28 people</span></div>
+                        <div class="info-desc"><span data-lang="it">Dai 22 anni in su</span><span data-lang="en">Aged 22+</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-earth-europe"></i></div>
+                        <div class="info-label"><span data-lang="it">Paesi</span><span data-lang="en">Countries</span></div>
+                        <div class="info-value">5</div>
+                        <div class="info-desc">
+                            <span data-lang="it">Lettonia, Italia, Francia, Spagna e Slovenia</span>
+                            <span data-lang="en">Latvia, Italy, France, Spain and Slovenia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COSA ESPLOREREMO / REQUISITI -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="content-card">
+                        <div class="icon"><i class="fas fa-leaf"></i></div>
+                        <h3 class="h2 mb-3"><span data-lang="it">Cosa Esploreremo</span><span data-lang="en">What We Will Explore</span></h3>
+                        <ul class="icon-list">
+                            <li><i class="fas fa-tree"></i><span data-lang="it">Pratiche eco-somatiche e immersione nella natura</span><span data-lang="en">Eco-somatic practices and nature immersion</span></li>
+                            <li><i class="fas fa-shoe-prints"></i><span data-lang="it">Forest bathing e camminate silenziose nella natura</span><span data-lang="en">Forest bathing and silent nature walks</span></li>
+                            <li><i class="fas fa-spa"></i><span data-lang="it">Consapevolezza somatica e regolazione del sistema nervoso</span><span data-lang="en">Somatic awareness and nervous-system regulation</span></li>
+                            <li><i class="fas fa-person-running"></i><span data-lang="it">Movimento, danza creativa, contact improvisation e gioco</span><span data-lang="en">Movement, creative dance, contact improvisation and play</span></li>
+                            <li><i class="fas fa-comments"></i><span data-lang="it">Comunicazione Nonviolenta e pratiche di consenso</span><span data-lang="en">Nonviolent Communication and consent practices</span></li>
+                            <li><i class="fas fa-heart"></i><span data-lang="it">Cerchi relazionali e di condivisione dal cuore</span><span data-lang="en">Relational and heart-sharing circles</span></li>
+                            <li><i class="fas fa-toolbox"></i><span data-lang="it">Strumenti pratici da portare nello youth work e nelle attività di comunità</span><span data-lang="en">Practical tools to bring into youth work and community activities</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="content-card">
+                        <div class="icon"><i class="fas fa-list-check"></i></div>
+                        <h3 class="h2 mb-3"><span data-lang="it">Requisiti</span><span data-lang="en">Requirements</span></h3>
+                        <ul class="icon-list">
+                            <li><i class="fas fa-check"></i><span data-lang="it">Avere almeno 22 anni</span><span data-lang="en">Being 22 or older</span></li>
+                            <li><i class="fas fa-check"></i><span data-lang="it">Avere un livello di inglese sufficiente per comunicare</span><span data-lang="en">Having a communicative level of English</span></li>
+                            <li><i class="fas fa-check"></i><span data-lang="it">Essere coinvolti in youth work, educazione, volontariato, facilitazione o attività simili</span><span data-lang="en">Being involved in youth work, education, volunteering, facilitation or related activities</span></li>
+                            <li><i class="fas fa-check"></i><span data-lang="it">Partecipare all'intero percorso del progetto</span><span data-lang="en">Taking part in the full project process</span></li>
+                            <li><i class="fas fa-check"></i><span data-lang="it">Organizzare almeno un piccolo workshop o attività di follow-up al rientro a casa</span><span data-lang="en">Organising at least one small follow-up workshop or activity after returning home</span></li>
+                        </ul>
+                        <div class="note-box">
+                            <i class="fas fa-ban"></i>
+                            <span data-lang="it">Il progetto è libero da alcol e droghe, per creare un ambiente sicuro e concentrato sull'apprendimento e sulla connessione.</span>
+                            <span data-lang="en">The project is alcohol- and drug-free, creating a safe and focused environment for learning and connection.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FINANZIAMENTO -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto" data-aos="fade-up">
+                    <div class="content-card">
+                        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3 class="h2 mb-3"><span data-lang="it">Completamente Finanziato</span><span data-lang="en">Fully Funded</span></h3>
+                        <ul class="icon-list">
+                            <li><i class="fas fa-bed"></i><span data-lang="it">Alloggio, pasti e formazione sono coperti</span><span data-lang="en">Accommodation, meals and training are covered</span></li>
+                            <li><i class="fas fa-plane"></i><span data-lang="it">Le spese di viaggio sono rimborsate secondo le fasce di distanza Erasmus+</span><span data-lang="en">Travel costs are reimbursed according to Erasmus+ distance bands</span></li>
+                            <li><i class="fas fa-certificate"></i><span data-lang="it">I partecipanti ricevono il certificato Youthpass</span><span data-lang="en">Participants receive a Youthpass Certificate</span></li>
+                            <li><i class="fas fa-circle-xmark"></i><span data-lang="it">Nessuna quota di partecipazione o costo amministrativo</span><span data-lang="en">No participation or administrative fees</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CANDIDATURE -->
+            <div class="row mt-5 py-5 bg-white rounded shadow-sm" data-aos="fade-up">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="cta-icon"><i class="fas fa-snowflake"></i></div>
+                    <h2 class="fw-bold mb-3"><span data-lang="it">Candidature</span><span data-lang="en">Applications</span></h2>
+                    <span class="closed-badge">
+                        <i class="fas fa-lock"></i>
+                        <span data-lang="it">Candidature chiuse</span>
+                        <span data-lang="en">Applications closed</span>
+                    </span>
+                    <p class="text-muted fs-5 mb-4" data-lang="it">
+                        La scadenza per candidarsi era il <strong>14 ottobre 2026</strong>.
+                        Puoi comunque consultare l'infopack per conoscere meglio il progetto:
+                        uno spazio di connessione, movimento e apprendimento, con un po' di magia dell'inverno baltico.
+                    </p>
+                    <p class="text-muted fs-5 mb-4" data-lang="en">
+                        The application deadline was <strong>14 October 2026</strong>.
+                        You can still read the infopack to learn more about the project:
+                        a space for connection, movement and learning, with a little Baltic winter magic.
+                    </p>
+                    <a href="https://canva.link/76kzyu7q6b054j4" target="_blank" rel="noopener" class="btn btn-erasmus btn-lg px-5 me-3 mb-2">
+                        <i class="fas fa-file-lines me-2"></i>Infopack
+                    </a>
+                    <a href="#contatti" class="btn btn-outline-erasmus btn-lg px-5 mb-2">
+                        <i class="fas fa-envelope me-2"></i><span data-lang="it">Contattaci</span><span data-lang="en">Contact us</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contatti" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Chi Siamo</span><span data-lang="en">About Us</span></h5>
+                    <p class="text-muted" data-lang="it">
+                        Juter è un'associazione modenese e 'juter'
+                        deriva dalla parola dialettale 'aiutare'.
+                    </p>
+                    <p class="text-muted" data-lang="en">
+                        Juter is an association from Modena: 'juter'
+                        is the local dialect word for 'to help'.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i> juterodv@gmail.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i> +39 375 6088 761
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i> Modena
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Seguici</span><span data-lang="en">Follow Us</span></h5>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61586262233188" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.instagram.com/juter_odv/" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-muted">
+                <p class="mb-0">&copy; 2026 Juter. <span data-lang="it">Tutti i diritti riservati.</span><span data-lang="en">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

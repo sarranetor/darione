@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetto Libera-mente - Intelligenza Emotiva</title>
+    <title data-en="Libera-mente Project - Emotional Intelligence">Progetto Libera-mente - Intelligenza Emotiva</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
@@ -14,6 +14,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
+    <script src="lang.js"></script>
 
     <style>
         /* Per non avere problemi di larghezza su mobile con AOS */
@@ -168,6 +169,10 @@
                 <i class="fas fa-seedling me-2"></i>
                 Juter
             </a>
+            <div class="lang-switch ms-auto ms-lg-3 me-2 me-lg-0 order-lg-last" role="group" aria-label="Lingua / Language">
+                <button type="button" data-set-lang="it">IT</button>
+                <button type="button" data-set-lang="en">EN</button>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -177,16 +182,16 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#chisiamo-section">Chi Siamo</a>
+                        <a class="nav-link" href="index.html#chisiamo-section"><span data-lang="it">Chi Siamo</span><span data-lang="en">About Us</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="progetti.html">Progetti</a>
+                        <a class="nav-link" href="progetti.html"><span data-lang="it">Progetti</span><span data-lang="en">Projects</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="news.html">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contatti">Contatti</a>
+                        <a class="nav-link" href="#contatti"><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></a>
                     </li>
                     </ul>
             </div>
@@ -199,10 +204,11 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center hero-content">
                     <h1 class="display-3 fw-bold text-white mb-3" data-aos="fade-up">
-                        Progetto Libera-mente
+                        <span data-lang="it">Progetto Libera-mente</span><span data-lang="en">Libera-mente Project</span>
                     </h1>
                     <p class="lead text-white mb-0" data-aos="fade-up" data-aos-delay="100">
-                        Arte, Emozioni e Consapevolezza in Carcere
+                        <span data-lang="it">Arte, Emozioni e Consapevolezza in Carcere</span>
+                        <span data-lang="en">Art, Emotions and Awareness in Prison</span>
                     </p>
                 </div>
             </div>
@@ -214,10 +220,14 @@
             
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
-                    <h2 class="display-5 fw-bold mb-3">L'Arte che Libera</h2>
-                    <p class="lead text-muted">
-                        Un percorso di disegno e arte per esplorare l'intelligenza emotiva 
+                    <h2 class="display-5 fw-bold mb-3"><span data-lang="it">L'Arte che Libera</span><span data-lang="en">Art that Sets Free</span></h2>
+                    <p class="lead text-muted" data-lang="it">
+                        Un percorso di disegno e arte per esplorare l'intelligenza emotiva
                         all'interno del contesto carcerario.
+                    </p>
+                    <p class="lead text-muted" data-lang="en">
+                        A drawing and art programme to explore emotional intelligence
+                        inside the prison setting.
                     </p>
                     <div class="divider-libera mx-auto"></div>
                 </div>
@@ -225,21 +235,31 @@
 
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="foto/liberamente/evento1.jpeg" alt="Mostra del progetto Libera-mente" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
+                    <img src="foto/liberamente/evento1.jpeg" alt="Mostra del progetto Libera-mente" data-alt-en="Exhibition of the Libera-mente project" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="content-card">
                         <div class="icon"><i class="fas fa-palette"></i></div>
-                        <h3 class="h2 mb-3">Disegnare le Emozioni</h3>
-                        <p class="text-muted">
-                            Il progetto "Libera-mente" utilizza l'arte come strumento principale per lavorare 
-                            sull'<strong>intelligenza emotiva</strong>. Attraverso laboratori di disegno, pittura e arte terapia, 
+                        <h3 class="h2 mb-3"><span data-lang="it">Disegnare le Emozioni</span><span data-lang="en">Drawing Emotions</span></h3>
+                        <p class="text-muted" data-lang="it">
+                            Il progetto "Libera-mente" utilizza l'arte come strumento principale per lavorare
+                            sull'<strong>intelligenza emotiva</strong>. Attraverso laboratori di disegno, pittura e arte terapia,
                             i partecipanti sono guidati in un percorso di auto-analisi e consapevolezza.
                         </p>
-                        <p class="text-muted mt-3">
-                            L'obiettivo è fornire strumenti per riconoscere, comprendere e gestire le proprie emozioni 
-                            in un ambiente complesso come quello carcerario, trasformando l'espressione artistica 
+                        <p class="text-muted" data-lang="en">
+                            The "Libera-mente" project uses art as its main tool to work on
+                            <strong>emotional intelligence</strong>. Through drawing, painting and art therapy workshops,
+                            participants are guided on a path of self-reflection and awareness.
+                        </p>
+                        <p class="text-muted mt-3" data-lang="it">
+                            L'obiettivo è fornire strumenti per riconoscere, comprendere e gestire le proprie emozioni
+                            in un ambiente complesso come quello carcerario, trasformando l'espressione artistica
                             in una forma di dialogo interiore.
+                        </p>
+                        <p class="text-muted mt-3" data-lang="en">
+                            The aim is to offer tools to recognise, understand and manage one's emotions
+                            in a complex environment such as prison, turning artistic expression
+                            into a form of inner dialogue.
                         </p>
                     </div>
                 </div>
@@ -247,17 +267,23 @@
             
             <div class="row align-items-center mb-5 flex-lg-row-reverse">
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="foto/liberamente/evento2.jpeg" alt="Foto della mostra a Bastiglia" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
+                    <img src="foto/liberamente/evento2.jpeg" alt="Foto della mostra a Bastiglia" data-alt-en="Photo of the exhibition in Bastiglia" class="img-fluid rounded shadow-lg mb-4 mb-lg-0">
                 </div>
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="content-card">
                         <div class="icon"><i class="fas fa-bullhorn"></i></div>
-                        <h3 class="h2 mb-3">La Mostra a Bastiglia</h3>
-                        <p class="text-muted">
+                        <h3 class="h2 mb-3"><span data-lang="it">La Mostra a Bastiglia</span><span data-lang="en">The Exhibition in Bastiglia</span></h3>
+                        <p class="text-muted" data-lang="it">
                             Il percorso artistico e umano del progetto "Libera-mente" è stato condiviso con la comunità attraverso un evento di disseminazione.
                         </p>
-                        <p class="text-muted mt-3">
-                            Nel **Febbraio 2025**, le opere realizzate sono state esposte in una mostra dedicata a **Bastiglia (MO)**, creando un ponte tra il carcere e il territorio. È stata un'occasione preziosa per mostrare il potenziale e le riflessioni emerse, dando voce e visibilità ai talenti scoperti.
+                        <p class="text-muted" data-lang="en">
+                            The artistic and human journey of the "Libera-mente" project was shared with the community through a public dissemination event.
+                        </p>
+                        <p class="text-muted mt-3" data-lang="it">
+                            Nel <strong>Febbraio 2025</strong>, le opere realizzate sono state esposte in una mostra dedicata a <strong>Bastiglia (MO)</strong>, creando un ponte tra il carcere e il territorio. È stata un'occasione preziosa per mostrare il potenziale e le riflessioni emerse, dando voce e visibilità ai talenti scoperti.
+                        </p>
+                        <p class="text-muted mt-3" data-lang="en">
+                            In <strong>February 2025</strong>, the works were shown in a dedicated exhibition in <strong>Bastiglia (MO)</strong>, building a bridge between the prison and the local community. It was a valuable chance to show the potential and reflections that emerged, giving voice and visibility to the talents discovered.
                         </p>
                     </div>
                 </div>
@@ -265,8 +291,9 @@
 
             <div class="row mt-5 pt-5 justify-content-center" data-aos="fade-up">
                 <div class="col-lg-10 text-center">
-                    <h3 class="h2 fw-bold mb-3">Opere dal Progetto</h3>
-                    <p class="text-muted fs-5 mb-4">Una selezione dei lavori realizzati dai partecipanti durante i laboratori. <br>Clicca sulle frecce per scorrere o attendi la rotazione automatica.</p>
+                    <h3 class="h2 fw-bold mb-3"><span data-lang="it">Opere dal Progetto</span><span data-lang="en">Works from the Project</span></h3>
+                    <p class="text-muted fs-5 mb-4" data-lang="it">Una selezione dei lavori realizzati dai partecipanti durante i laboratori. <br>Clicca sulle frecce per scorrere o attendi la rotazione automatica.</p>
+                    <p class="text-muted fs-5 mb-4" data-lang="en">A selection of works created by participants during the workshops. <br>Use the arrows to browse or wait for the automatic rotation.</p>
                     
                     <div id="carouselOpere" class="carousel slide shadow-lg rounded" data-bs-ride="carousel" data-bs-interval="15000">
                         <div class="carousel-indicators">
@@ -280,32 +307,32 @@
                         
                         <div class="carousel-inner rounded">
                             <div class="carousel-item active">
-                                <img src="foto/liberamente/1.jpeg" class="d-block w-100" alt="Opera 1 - Progetto Libera-mente">
+                                <img src="foto/liberamente/1.jpeg" class="d-block w-100" alt="Opera 1 - Progetto Libera-mente" data-alt-en="Artwork 1 - Libera-mente Project">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/liberamente/2.jpeg" class="d-block w-100" alt="Opera 2 - Progetto Libera-mente">
+                                <img src="foto/liberamente/2.jpeg" class="d-block w-100" alt="Opera 2 - Progetto Libera-mente" data-alt-en="Artwork 2 - Libera-mente Project">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/liberamente/3.jpeg" class="d-block w-100" alt="Opera 3 - Progetto Libera-mente">
+                                <img src="foto/liberamente/3.jpeg" class="d-block w-100" alt="Opera 3 - Progetto Libera-mente" data-alt-en="Artwork 3 - Libera-mente Project">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/liberamente/4.jpeg" class="d-block w-100" alt="Opera 4 - Progetto Libera-mente">
+                                <img src="foto/liberamente/4.jpeg" class="d-block w-100" alt="Opera 4 - Progetto Libera-mente" data-alt-en="Artwork 4 - Libera-mente Project">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/liberamente/5.jpeg" class="d-block w-100" alt="Opera 5 - Progetto Libera-mente">
+                                <img src="foto/liberamente/5.jpeg" class="d-block w-100" alt="Opera 5 - Progetto Libera-mente" data-alt-en="Artwork 5 - Libera-mente Project">
                             </div>
                             <div class="carousel-item">
-                                <img src="foto/liberamente/6.jpeg" class="d-block w-100" alt="Opera 6 - Progetto Libera-mente">
+                                <img src="foto/liberamente/6.jpeg" class="d-block w-100" alt="Opera 6 - Progetto Libera-mente" data-alt-en="Artwork 6 - Libera-mente Project">
                             </div>
                         </div>
                         
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselOpere" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Precedente</span>
+                            <span class="visually-hidden"><span data-lang="it">Precedente</span><span data-lang="en">Previous</span></span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselOpere" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Successiva</span>
+                            <span class="visually-hidden"><span data-lang="it">Successiva</span><span data-lang="en">Next</span></span>
                         </button>
                     </div>
                 </div>
@@ -313,13 +340,17 @@
             <div class="row mt-5 py-5 bg-white rounded shadow-sm" data-aos="fade-up">
                 <div class="col-lg-8 mx-auto text-center">
                     <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
-                    <h2 class="fw-bold mb-3">Supporta il Progetto</h2>
-                    <p class="text-muted fs-5 mb-4">
-                        Per maggiori informazioni su "Libera-mente" o per 
+                    <h2 class="fw-bold mb-3"><span data-lang="it">Supporta il Progetto</span><span data-lang="en">Support the Project</span></h2>
+                    <p class="text-muted fs-5 mb-4" data-lang="it">
+                        Per maggiori informazioni su "Libera-mente" o per
                         supportare le nostre iniziative, non esitare a contattarci.
                     </p>
+                    <p class="text-muted fs-5 mb-4" data-lang="en">
+                        For more information about "Libera-mente" or to
+                        support our initiatives, feel free to get in touch.
+                    </p>
                     <a href="#contatti" class="btn btn-libera btn-lg px-5">
-                        <i class="fas fa-envelope me-2"></i>Contattaci
+                        <i class="fas fa-envelope me-2"></i><span data-lang="it">Contattaci</span><span data-lang="en">Contact us</span>
                     </a>
                 </div>
             </div>
@@ -331,14 +362,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">Chi Siamo</h5>
-                    <p class="text-muted">
-                        Juter è un'associazione modenese e 'juter' 
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Chi Siamo</span><span data-lang="en">About Us</span></h5>
+                    <p class="text-muted" data-lang="it">
+                        Juter è un'associazione modenese e 'juter'
                         deriva dalla parola dialettale 'aiutare'.
+                    </p>
+                    <p class="text-muted" data-lang="en">
+                        Juter is an association from Modena: 'juter'
+                        is the local dialect word for 'to help'.
                     </p>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">Contatti</h5>
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></h5>
                     <ul class="list-unstyled text-muted">
                         <li class="mb-2">
                             <i class="fas fa-envelope me-2"></i> juterodv@gmail.com
@@ -352,7 +387,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">Seguici</h5>
+                    <h5 class="fw-bold mb-3"><span data-lang="it">Seguici</span><span data-lang="en">Follow Us</span></h5>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=61586262233188" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
                         <a href="https://www.instagram.com/juter_odv/" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
@@ -362,7 +397,7 @@
             </div>
             <hr class="my-4 bg-secondary">
             <div class="text-center text-muted">
-                <p class="mb-0">&copy; 2025 Juter. Tutti i diritti riservati.</p>
+                <p class="mb-0">&copy; 2025 Juter. <span data-lang="it">Tutti i diritti riservati.</span><span data-lang="en">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
